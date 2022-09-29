@@ -1,0 +1,30 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+}
+
+html, body, .container{
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex: 1;
+}
+
+.header, .footer{
+    flex-shrink: 0;
+}
