@@ -20,6 +20,8 @@ body {
 
 .header {
     background-color: #F8F6F7;
+    overflow: hidden;
+    background: url("./images/header_background_image.png");
 }
 
 .header-top {
@@ -27,6 +29,12 @@ body {
     align-items: baseline;
     justify-content: space-between;
     padding: 30px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.header .container {
+    position: relative;
 }
 
 html, body, .wrapper {
@@ -121,6 +129,7 @@ html, body, .wrapper {
 .header-hero h1 {
     font-size: 48px;
     font-weight: 600;
+    margin: 0;
 }
 
 .header-hero p {
@@ -143,10 +152,21 @@ html, body, .wrapper {
 }
 
 .header-image {
-    height: 510;
-    width: 524;
-    background: url('./images/girl.png');
+    height: 510px;
+    width: 524px;
     position: absolute;
+    bottom: 0;
+    right: 80px;
+}
+
+.header-image::after{
+    content:'';
+    background: url("./images/makiiazh-devushka.png");
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 2;
 }
 
 .header-image::before {
@@ -155,7 +175,38 @@ html, body, .wrapper {
     height: 472px;
     background-color: #FB9475;
     position: absolute;
-    bottom: 0;
+    bottom: -110px;
     right: 0;
-    z-index: -1;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.header-social-link {
+    position: absolute;
+    margin: auto;
+    right: 0;
+    bottom: 237px;
+    top: 237px;
+
+}
+
+.vk-link,
+.inst-link,
+.youtube-link {
+    width: 28px;
+    height: 28px;
+}
+
+.vk-link {
+    background: url("./images/vk-link.png");
+    margin-bottom: 20px;
+}
+
+.inst-link {
+    background: url("./images/inst-link.png");
+    margin-bottom: 20px;
+}
+
+.youtube-link {
+    background: url("./images/youtube-link.png");
 }
