@@ -24,7 +24,8 @@ body {
     background: url("./images/header_background_image.png");
 }
 
-.header-top {
+.header-top,
+.footer-content {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -67,6 +68,14 @@ html, body, .wrapper {
     align-items: center;
     margin-bottom: 32px;
 }
+
+.section-title {
+    font-family: inherit;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+
 .phone-number a,
 .logo,
 .navigation a {
@@ -209,4 +218,36 @@ html, body, .wrapper {
 
 .youtube-link {
     background: url("./images/youtube-link.png");
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-subheader {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 570px;
+    margin: 0 0 16px 0;
+    line-height: 32px;
+}
+
+.about-text {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 538px;
+    line-height: 26px;
+}
+
+.image-content{
+    width: 445px;
+    height: 296px;
+    background: url("./images/video_about_us.png");
+}
+
+.copyright {
+    margin-bottom: 8px;
 }
