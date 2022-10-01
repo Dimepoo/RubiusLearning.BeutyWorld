@@ -1,30 +1,161 @@
-html{
+html {
     box-sizing: border-box;
 }
 
 *,
 *:after,
-*:before{
+*:before {
     box-sizing: inherit;
 }
 
-body{
+body {
     margin: 0;
+    font: 16px "Montserrat", sans-serif;
+    color: #333;
 }
 
-html, body, .container{
+.main {
+    flex: 1;
+}
+
+.header {
+    background-color: #F8F6F7;
+}
+
+.header-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+html, body, .wrapper {
     height: 100%;
 }
 
-.container{
+.wrapper {
     display: flex;
     flex-direction: column;
 }
 
-.main{
-    flex: 1;
+.header, .footer {
+    flex-shrink: 0;
 }
 
-.header, .footer{
-    flex-shrink: 0;
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.section {
+    padding: 50px 0px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.phone-number a,
+.logo,
+.navigation a {
+    color: #333;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.navigation li:not(:last-child) {
+    margin-right: 28px;
+}
+
+.navigation a {
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.15 color;
+}
+
+.navigation a:hover {
+    color:#00BF78;
+
+}
+
+.phone-number {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-number a {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.phone-number div {
+    font-size: 11px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.header-hero {
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    padding: 90px 0 130px 0 ;
+}
+
+.header-hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.header-hero p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 59px;
+}
+
+.base-button
+{
+    background-color: #FB9475;
+    border-radius: 24px;
+    border-color: transparent;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    padding: 17px 30px;
+    align-self: flex-start;
+}
+
+.header-image {
+    height: 510;
+    width: 524;
+    background: url('./images/girl.png');
+    position: absolute;
+}
+
+.header-image::before {
+    content: '';
+    width: 472px;
+    height: 472px;
+    background-color: #FB9475;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
