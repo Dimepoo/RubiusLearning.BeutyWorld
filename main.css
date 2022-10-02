@@ -302,8 +302,9 @@ html, body, .wrapper {
     text-align: center;
 }
 
-.about-content-bottom-text {
-    max-width: 296px;
+.about-content-bottom-text-mirror,
+.about-content-bottom-text-health-care,
+.about-content-bottom-text-scissors {
     font-size: 14px;
     font-weight: 400;
     font-family: inherit;
@@ -315,4 +316,16 @@ html, body, .wrapper {
     width: 48px;
     height: 48px;
     align-self: center;
+}
+
+.about-content-bottom-text-mirror {
+    max-width: 296px;
+}
+
+.about-content-bottom-text-health-care {
+    max-width: 255px;
+}
+
+.about-content-bottom-text-scissors {
+    max-width: 263px;
 }
