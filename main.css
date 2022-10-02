@@ -27,11 +27,19 @@ body {
 .header-top,
 .footer-content {
     display: flex;
-    align-items: baseline;
     justify-content: space-between;
-    padding: 30px 0;
     position: relative;
     z-index: 2;
+}
+
+.header-top {
+    padding: 30px 0;
+    align-items: baseline;
+}
+
+.footer-content {
+    padding: 20px 0;
+    align-items: center;
 }
 
 .header .container {
@@ -245,7 +253,32 @@ html, body, .wrapper {
 .image-content{
     width: 445px;
     height: 296px;
-    background: url("./images/video_about_us.png");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./images/video_about_us.png");
+    border-radius: 8px;
+    position: relative;
+}
+
+.image-inner-elem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25%;
+}
+
+.play-button {
+    content: '';
+    width: 61px;
+    height: 61px;
+    background: url("./images/play-video.png");
+}
+
+.about-video-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    font-family: inherit;
+    color: #FFF;
+    text-align: center;
 }
 
 .copyright {
