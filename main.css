@@ -136,11 +136,17 @@ html, body, .wrapper {
     text-align: right;
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 0 130px 0;
+}
+
 .header-hero {
     display: flex;
     flex-direction: column;
     max-width: 540px;
-    padding: 90px 0 130px 0 ;
 }
 
 .header-hero h1 {
@@ -196,15 +202,6 @@ html, body, .wrapper {
     right: 0;
     border-radius: 50%;
     z-index: 0;
-}
-
-.header-social-link {
-    position: absolute;
-    margin: auto;
-    right: 0;
-    bottom: 237px;
-    top: 237px;
-
 }
 
 .vk-link,
@@ -283,4 +280,39 @@ html, body, .wrapper {
 
 .copyright {
     margin-bottom: 8px;
+}
+
+.about-content-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.about-content-bottom-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+}
+
+.about-content-bottom-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: inherit;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.about-content-bottom-text {
+    max-width: 296px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: inherit;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.about-content-bottom-img {
+    width: 48px;
+    height: 48px;
+    align-self: center;
 }
