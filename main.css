@@ -163,6 +163,7 @@ html, body, .wrapper {
 
 .base-button
 {
+    cursor: pointer;
     background-color: #FB9475;
     border-radius: 24px;
     border-color: transparent;
@@ -280,6 +281,8 @@ html, body, .wrapper {
 
 .copyright {
     margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .about-content-bottom {
@@ -328,4 +331,9 @@ html, body, .wrapper {
 
 .about-content-bottom-text-scissors {
     max-width: 263px;
+}
+
+.privacy-policy {
+    font-size: 12px;
+    font-weight: 400;
 }
