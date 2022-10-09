@@ -24,20 +24,20 @@ body {
     background: url("./images/header_background_image.png");
 }
 
-.header-top,
-.footer-content {
+.header__top,
+.footer__content {
     display: flex;
     justify-content: space-between;
     position: relative;
     z-index: 2;
 }
 
-.header-top {
+.header__top {
     padding: 30px 0;
     align-items: baseline;
 }
 
-.footer-content {
+.footer__content {
     padding: 20px 0;
     align-items: center;
 }
@@ -70,23 +70,23 @@ html, body, .wrapper {
     padding: 50px 0px;
 }
 
-.section-header {
+.section__section-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
 }
 
-.section-title {
+.section-top__section-top-title {
     font-family: inherit;
     font-size: 48px;
     font-weight: 700;
     margin: 0;
 }
 
-.phone-number a,
+.phone-worktime-info__phonenumber,
 .logo,
-.navigation a {
+.navigation__link {
     color: #333;
     text-decoration: none;
 }
@@ -96,7 +96,7 @@ html, body, .wrapper {
     font-weight: 700;
 }
 
-.navigation ul {
+.navigation__list {
     list-style: none;
     padding: 0;
     display: flex;
@@ -104,65 +104,69 @@ html, body, .wrapper {
     flex-wrap: wrap;
 }
 
-.navigation li:not(:last-child) {
+.navigation__item:not(:last-child) {
     margin-right: 28px;
 }
 
-.navigation a {
+.navigation__link {
     font-weight: 500;
     font-size: 14px;
     transition: 0.15 color;
 }
 
-.navigation a:hover {
+.navigation__link:hover {
     color:#00BF78;
 
 }
 
-.phone-number {
+.navigation__link--small-size {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.phone-worktime-info {
     display: flex;
     flex-direction: column;
 }
 
-.phone-number a {
+.phone-worktime-info__phonenumber {
     font-size: 18px;
     font-weight: 500;
     text-align: right;
 }
 
-.phone-number div {
+.phone-worktime-info__worktime {
     font-size: 11px;
     font-weight: 400;
     text-align: right;
 }
 
-.header-content {
+.header__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 90px 0 130px 0;
 }
 
-.header-hero {
+.header__hero {
     display: flex;
     flex-direction: column;
     max-width: 540px;
 }
 
-.header-hero h1 {
+.hero__title {
     font-size: 48px;
     font-weight: 600;
     margin: 0;
 }
 
-.header-hero p {
+.hero__subtitle {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 59px;
 }
 
-.base-button
-{
+.base-button {
     cursor: pointer;
     background-color: #FB9475;
     border-radius: 24px;
@@ -175,7 +179,7 @@ html, body, .wrapper {
     align-self: flex-start;
 }
 
-.header-image {
+.header__main-image {
     height: 510px;
     width: 524px;
     position: absolute;
@@ -183,7 +187,7 @@ html, body, .wrapper {
     right: 80px;
 }
 
-.header-image::after{
+.header__main-image::after {
     content:'';
     background: url("./images/makiiazh-devushka.png");
     width: 100%;
@@ -193,7 +197,7 @@ html, body, .wrapper {
     z-index: 2;
 }
 
-.header-image::before {
+.header__main-image::before {
     content: '';
     width: 472px;
     height: 472px;
@@ -205,33 +209,27 @@ html, body, .wrapper {
     z-index: 0;
 }
 
-.vk-link,
-.inst-link,
-.youtube-link {
+.header__social {
+    list-style: none;
+}
+
+.social__item {
+    text-decoration: none;
+    display: block;
     width: 28px;
     height: 28px;
 }
 
-.vk-link {
-    background: url("./images/vk-link.png");
-    margin-bottom: 20px;
+.social__item:not(:last-child) {
+    margin: 0 0 20px 0;
 }
 
-.inst-link {
-    background: url("./images/inst-link.png");
-    margin-bottom: 20px;
-}
-
-.youtube-link {
-    background: url("./images/youtube-link.png");
-}
-
-.about-content {
+.section__section-content {
     display: flex;
     justify-content: space-between;
 }
 
-.about-subheader {
+.about-text-content__subheader {
     font-family: inherit;
     font-size: 20px;
     font-weight: 400;
@@ -240,7 +238,7 @@ html, body, .wrapper {
     line-height: 32px;
 }
 
-.about-text {
+.about-text-content__text {
     font-family: inherit;
     font-size: 16px;
     font-weight: 400;
@@ -248,7 +246,7 @@ html, body, .wrapper {
     line-height: 26px;
 }
 
-.image-content{
+.about-image-content{
     width: 445px;
     height: 296px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./images/video_about_us.png");
@@ -256,21 +254,21 @@ html, body, .wrapper {
     position: relative;
 }
 
-.image-inner-elem {
+.about-image-content__image-inner-elem {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 25%;
 }
 
-.play-button {
+.image-inner-elem__play-button {
     content: '';
     width: 61px;
     height: 61px;
     background: url("./images/play-video.png");
 }
 
-.about-video-text {
+.image-inner-elem__text {
     font-size: 16px;
     font-weight: 500;
     line-height: 26px;
@@ -279,25 +277,23 @@ html, body, .wrapper {
     text-align: center;
 }
 
-.copyright {
+.footer-info__copyright {
     margin-bottom: 8px;
-    font-size: 12px;
-    font-weight: 400;
 }
 
-.about-content-bottom {
+.about-advantage-content {
     display: flex;
     justify-content: space-between;
     padding-top: 100px;
 }
 
-.about-content-bottom-item {
+.about-advantage-content__advantage-item {
     display: flex;
     flex-direction: column;
     max-width: 350px;
 }
 
-.about-content-bottom-subtitle {
+.advantage-item__subtitle {
     font-size: 18px;
     font-weight: 600;
     font-family: inherit;
@@ -305,9 +301,9 @@ html, body, .wrapper {
     text-align: center;
 }
 
-.about-content-bottom-text-mirror,
-.about-content-bottom-text-health-care,
-.about-content-bottom-text-scissors {
+.advantage-item__cabinets-text,
+.advantage-item__cosmetics-text,
+.advantage-item__masters-text {
     font-size: 14px;
     font-weight: 400;
     font-family: inherit;
@@ -315,25 +311,25 @@ html, body, .wrapper {
     text-align: center;
 }
 
-.about-content-bottom-img {
+.advantage-item__img {
     width: 48px;
     height: 48px;
     align-self: center;
 }
 
-.about-content-bottom-text-mirror {
+.advantage-item__cabinets-text {
     max-width: 296px;
 }
 
-.about-content-bottom-text-health-care {
+.advantage-item__cosmetics-text {
     max-width: 255px;
 }
 
-.about-content-bottom-text-scissors {
+.advantage-item__masters-text {
     max-width: 263px;
 }
 
-.privacy-policy {
+.footer-info {
     font-size: 12px;
     font-weight: 400;
 }

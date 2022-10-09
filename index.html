@@ -19,51 +19,74 @@
         <header class="header">
             <div class="container">
 
-                <div class="header-image">
+                <div class="header__main-image">
 
                 </div>
 
-                <div class="header-top">
+                <div class="header__top">
                     <a href="" class="logo">Мир красоты</a>
 
                     <nav class="navigation">
-                        <ul>
-                            <li><a href="#">Услуги и цены</a></li>
-                            <li><a href="#">Мастера</a></li>
-                            <li><a href="#">Наши работы</a></li>
-                            <li><a href="#about">О нас</a></li>
-                            <li><a href="#">Контакты</a></li>
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="#">Услуги и цены</a>
+                            </li>
+
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="#">Мастера</a>
+                            </li>
+
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="#">Наши работы</a>
+                            </li>
+
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="#about">О нас</a>
+                            </li>
+
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="#">Контакты</a>
+                            </li>
                         </ul>
                     </nav>
 
-                    <div class="phone-number">
-                        <a href="tel:84996861762">8 (499) 686-17-62</a>
-                        <div>с 10.00 до 19.00 без выходных</div>
+                    <div class="phone-worktime-info">
+                        <a class="phone-worktime-info__phonenumber" href="tel:84996861762">8 (499) 686-17-62</a>
+                        <div class="phone-worktime-info__worktime">с 10.00 до 19.00 без выходных</div>
                     </div>
 
                 </div>
                 
-                <div class="header-content">
-                    <div class="header-hero">
-                        <h1>Создай свой образ вместе с нами</h1>
-                        <p>Идеальный образ за 60 минут</p>
+                <div class="header__content">
+                    <div class="hero header__hero">
+                        <h1 class="hero__title">Создай свой образ вместе с нами</h1>
+                        <p class="hero__subtitle">Идеальный образ за 60 минут</p>
     
                         <button class="base-button">
                             Записаться онлайн
                         </button>
                     </div>
-    
-                    <div class="header-social-link">
-                        <a href="#">
-                            <div class="vk-link"></div>
-                        </a>
-                        <a href="#">
-                            <div class="inst-link"></div>
-                        </a>
-                        <a href="#">
-                            <div class="youtube-link"></div>
-                        </a>
-                    </div>
+
+                    <ul class="social header__social">
+                        <li class="social__item">
+                          <a href="#" class="social__link">
+                            <img src="./images/vk-link.png">
+                          </a>
+                        </li>
+                
+                        <li class="social__item">
+                          <a href="#" class="social__link">
+                            <img src="./images/inst-link.png">
+                          </a>
+                        </li>
+                
+                        <li class="social__item">
+                          <a href="#" class="social__link">
+                            <img src="./images/youtube-link.png">
+                          </a>
+                        </li>
+                    </ul>
+
                 </div>
 
             </div>
@@ -76,53 +99,53 @@
 
                 <div class="container">
 
-                    <div class="section-header">
-                        <h2 class="section-title">
+                    <div class="section-top section__section-top">
+                        <h2 class="section-top__section-top-title">
                             О салоне
                         </h2>
                     </div>
 
-                    <div class="about-content">
+                    <div class="section-content section__section-content">
 
-                            <div class="text-content">
+                            <div class="about-text-content">
                             
-                                <p class="about-subheader">Мир красоты - это уютный салон в самом центре города. 
-                                    Здесь работают профессиональные визажисты, стилисты и мастера татуажа</p>
-                                <p class="about-text">Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму,
+                                <p class="about-text-content__subheader">Мир красоты - это уютный салон в самом центре города. 
+                                    Здесь работют профессиональные визажисты, стилисты и мастера татуажа</p>
+                                <p class="about-text-content__text">Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму,
                                     а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. 
                                     Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.</p>
     
                             </div>
     
-                            <div class="image-content">
-                                <div class="image-inner-elem">
-                                    <div class="play-button"></div>
-                                    <div class="about-video-text">Короткое видео о нас</div>
+                            <div class="about-image-content">
+                                <div class="image-inner-elem about-image-content__image-inner-elem">
+                                    <div class="image-inner-elem__play-button"></div>
+                                    <div class="image-inner-elem__text">Короткое видео о нас</div>
                                 </div>
                             </div>
 
                     </div>
 
-                    <div class="about-content-bottom">
+                    <div class="about-advantage-content">
 
-                        <div class="about-content-bottom-item">
-                            <img class="about-content-bottom-img" src="./images/mirror.png">
-                            <div class="about-content-bottom-subtitle">Удобные кабинеты</div>
-                            <div class="about-content-bottom-text-mirror">Комфорт и стиль - принцип создания кабинетов салона красоты. 
+                        <div class="advantage-item about-advantage-content__advantage-item">
+                            <img class="advantage-item__img" src="./images/mirror.png">
+                            <div class="advantage-item__subtitle">Удобные кабинеты</div>
+                            <div class="advantage-item__cabinets-text">Комфорт и стиль - принцип создания кабинетов салона красоты. 
                                 Только эстетика и удобство для Вас</div>
                         </div>
 
-                        <div class="about-content-bottom-item">
-                            <img class="about-content-bottom-img" src="./images/health-care.png">
-                            <div class="about-content-bottom-subtitle">Качественная косметика</div>
-                            <div class="about-content-bottom-text-health-care">Используем профессиональные материалы 
+                        <div class="about-advantage-content__advantage-item">
+                            <img class="advantage-item__img" src="./images/health-care.png">
+                            <div class="advantage-item__subtitle">Качественная косметика</div>
+                            <div class="advantage-item__cosmetics-text">Используем профессиональные материалы 
                                 высшего качества лучших брендов</div>
                         </div>
 
-                        <div class="about-content-bottom-item">
-                            <img class="about-content-bottom-img" src="./images/scissors.png">
-                            <div class="about-content-bottom-subtitle">Опытные мастера</div>
-                            <div class="about-content-bottom-text-scissors">Работают только опытные мастера с чувством стиля. 
+                        <div class="about-advantage-content__advantage-item">
+                            <img class="advantage-item__img" src="./images/scissors.png">
+                            <div class="advantage-item__subtitle">Опытные мастера</div>
+                            <div class="advantage-item__masters-text">Работают только опытные мастера с чувством стиля. 
                                 Смотрите наших специалистов в разделе Мастера</div>
                         </div>
 
@@ -135,23 +158,35 @@
 
         <footer class="footer">
             <div class="container">
-                <div class="footer-content">
+                <div class="footer__content">
                     
-                    <div class="privacy-policy">
-                        <div class="copyright">© 2022 Мир Красоты</div>
+                    <div class="footer-info">
+                        <div class="footer-info__copyright">© 2022 Мир Красоты</div>
 
-                        <a href="">Политика конфидециальности</a>
+                        <a class="footer-info__privacy-policy" href="">Политика конфидециальности</a>
                     </div>
 
                     <nav class="navigation">
-                        <ul>
-                            <li><a href="#">Услуги и цены</a></li>
-                            <li><a href="#">Мастера</a></li>
-                            <li><a href="#">Наши работы</a></li>
-                            <li><a href="#">Контакты</a></li>
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--small-size" href="#">Услуги и цены</a>
+                            </li>
+
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--small-size" href="#">Мастера</a>
+                            </li>
+
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--small-size" href="#">Наши работы</a>
+                            </li>
+
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--small-size" href="#">Контакты</a>
+                            </li>
                         </ul>
 
-                    </nav>
+                    </nav>  
+             
                 </div>
             </div>
         </footer>
