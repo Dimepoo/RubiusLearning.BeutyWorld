@@ -121,7 +121,7 @@ html, body, .wrapper {
 
 }
 
-.navigation__link--small-size {
+.footer__nav .navigation__link {
     font-size: 12px;
     font-weight: 400;
 }
@@ -154,6 +154,7 @@ html, body, .wrapper {
     display: flex;
     flex-direction: column;
     max-width: 540px;
+    align-items: flex-start;
 }
 
 .hero__title {
@@ -172,7 +173,6 @@ html, body, .wrapper {
     cursor: pointer;
     background-color: #FB9475;
     border-width: 0;
-    border-radius: 24px;
     color: #FFF;
     font-family: inherit;
 }
@@ -181,6 +181,14 @@ html, body, .wrapper {
     padding: 17px 30px;
     font-size: 14px;
     font-weight: 500;
+    border-radius: 24px;
+}
+
+.base-button--small {
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 17px;
 }
 
 .header__main-image {
@@ -214,7 +222,11 @@ html, body, .wrapper {
 }
 
 .header__social {
+    display: flex;
     list-style: none;
+    flex-direction: row;
+    padding: 0;
+    
 }
 
 .social__item {
@@ -225,12 +237,26 @@ html, body, .wrapper {
 }
 
 .social__item:not(:last-child) {
+    margin: 0 20px 0 0;
+}
+
+.social--vertical {
+    flex-direction: column;
+}
+
+.social--vertical .social__item:not(:last-child) {
     margin: 0 0 20px 0;
 }
 
-.section__section-content {
+.section__section-content,
+.section-content__about-info {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+}
+
+.section-content__about-info {
+    flex-direction: row;
 }
 
 .about-text-content__subheader {
@@ -337,6 +363,41 @@ html, body, .wrapper {
     font-size: 12px;
     font-weight: 400;
 }
+
+/* Стили раздела "Популярные услуги" */
+
+.services {
+    margin-top: -40px;
+}
+
+.services > div {
+    margin-top: 48px;
+}
+
+.service__picture {
+    width: 350px;
+    height: 180px;
+    border-radius: 8px;
+}
+
+.service__img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.service__title {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 20px 0 0 0;
+}
+
+.service__dicr {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 8px 0 16px 0;
+}
+
 
 /* Медиа-запросы */
 

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.2/css/bootstrap-grid.min.css">
 
     <link rel="stylesheet" href="./main.css">
 </head>
@@ -29,7 +30,7 @@
                     <nav class="navigation header__nav">
                         <ul class="navigation__list">
                             <li class="navigation__item">
-                                <a class="navigation__link" href="#">Услуги и цены</a>
+                                <a class="navigation__link" href="#popular-services">Услуги и цены</a>
                             </li>
 
                             <li class="navigation__item">
@@ -62,14 +63,13 @@
                         <h1 class="hero__title">Создай свой образ вместе с нами</h1>
                         <p class="hero__subtitle">Идеальный образ за 60 минут</p>
                         
-                        <div class="header__button">
-                            <button class="base-button base-button--large">
-                                Записаться онлайн
-                            </button>
-                        </div>
+                        <button class="base-button base-button--large">
+                            Записаться онлайн
+                        </button>
+
                     </div>
 
-                    <ul class="social header__social">
+                    <ul class="social social--vertical header__social">
                         <li class="social__item">
                           <a href="#" class="social__link">
                             <img src="./images/vk-link.png">
@@ -109,52 +109,154 @@
 
                     <div class="section-content section__section-content">
 
-                            <div class="about-text-content">
+                            <div class="section-content__about-info">
+
+                                <div class="about-text-content">
                             
-                                <p class="about-text-content__subheader">Мир красоты - это уютный салон в самом центре города. 
-                                    Здесь работют профессиональные визажисты, стилисты и мастера татуажа</p>
-                                <p class="about-text-content__text">Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму,
-                                    а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. 
-                                    Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.</p>
-    
-                            </div>
-    
-                            <div class="about-image-content">
-                                <div class="image-inner-elem about-image-content__image-inner-elem">
-                                    <div class="image-inner-elem__play-button"></div>
-                                    <div class="image-inner-elem__text">Короткое видео о нас</div>
+                                    <p class="about-text-content__subheader">Мир красоты - это уютный салон в самом центре города. 
+                                        Здесь работют профессиональные визажисты, стилисты и мастера татуажа</p>
+                                    <p class="about-text-content__text">Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму,
+                                        а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. 
+                                        Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.</p>
+        
                                 </div>
+        
+                                <div class="about-image-content">
+                                    <div class="image-inner-elem about-image-content__image-inner-elem">
+                                        <div class="image-inner-elem__play-button"></div>
+                                        <div class="image-inner-elem__text">Короткое видео о нас</div>
+                                    </div>
+                                </div>
+
                             </div>
 
-                    </div>
+                            <div class="about-advantage-content">
 
-                    <div class="about-advantage-content">
-
-                        <div class="advantage-item about-advantage-content__advantage-item">
-                            <img class="advantage-item__img" src="./images/mirror.png">
-                            <div class="advantage-item__subtitle">Удобные кабинеты</div>
-                            <div class="advantage-item__cabinets-text">Комфорт и стиль - принцип создания кабинетов салона красоты. 
-                                Только эстетика и удобство для Вас</div>
-                        </div>
-
-                        <div class="about-advantage-content__advantage-item">
-                            <img class="advantage-item__img" src="./images/health-care.png">
-                            <div class="advantage-item__subtitle">Качественная косметика</div>
-                            <div class="advantage-item__cosmetics-text">Используем профессиональные материалы 
-                                высшего качества лучших брендов</div>
-                        </div>
-
-                        <div class="about-advantage-content__advantage-item">
-                            <img class="advantage-item__img" src="./images/scissors.png">
-                            <div class="advantage-item__subtitle">Опытные мастера</div>
-                            <div class="advantage-item__masters-text">Работают только опытные мастера с чувством стиля. 
-                                Смотрите наших специалистов в разделе Мастера</div>
-                        </div>
+                                <div class="advantage-item about-advantage-content__advantage-item">
+                                    <img class="advantage-item__img" src="./images/mirror.png">
+                                    <div class="advantage-item__subtitle">Удобные кабинеты</div>
+                                    <div class="advantage-item__cabinets-text">Комфорт и стиль - принцип создания кабинетов салона красоты. 
+                                        Только эстетика и удобство для Вас</div>
+                                </div>
+        
+                                <div class="about-advantage-content__advantage-item">
+                                    <img class="advantage-item__img" src="./images/health-care.png">
+                                    <div class="advantage-item__subtitle">Качественная косметика</div>
+                                    <div class="advantage-item__cosmetics-text">Используем профессиональные материалы 
+                                        высшего качества лучших брендов</div>
+                                </div>
+        
+                                <div class="about-advantage-content__advantage-item">
+                                    <img class="advantage-item__img" src="./images/scissors.png">
+                                    <div class="advantage-item__subtitle">Опытные мастера</div>
+                                    <div class="advantage-item__masters-text">Работают только опытные мастера с чувством стиля. 
+                                        Смотрите наших специалистов в разделе Мастера</div>
+                                </div>
+        
+                            </div>
 
                     </div>
 
                 </div>
             </section>
+
+            <!-- Раздел "Популярные услуги" -->
+            <section id="popular-services" class="section">
+
+                <div class="container">
+
+                    <div class="section-top section__section-top">
+                        <h2 class="section-top__section-top-title">
+                            Популярные услуги
+                        </h2>
+                    </div>
+
+                    <div class="section-content section__section-content">
+                        <div class="row services">
+                            
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+
+                                <div class="service">
+                                    <div class="service__picture">
+                                        <img class="service__img" src="./images/service-img.png" alt="">
+                                    </div>
+
+                                    <h4 class="service__title">Маникюр</h4>
+                                    <p class="service__dicr">Аппаратный, комбинированный или классический</p>
+                                    <button class="base-button base-button--small">Записаться</button>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+
+                                <div class="service">
+                                    <div class="service__picture">
+                                        <img class="service__img" src="./images/service-img.png" alt="">
+                                    </div>
+
+                                    <h4 class="service__title">Покрытие гель-лак</h4>
+                                    <p class="service__dicr">
+                                        Гель-лак наносится в несколько слоев с использование базы и топа. Каждый слой 
+                                        полимеризуется в LED-лампе
+                                    </p>
+                                    <button class="base-button base-button--small">Записаться</button>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+
+                                <div class="service">
+                                    <div class="service__picture">
+                                        <img class="service__img" src="./images/service-img.png" alt="">
+                                    </div>
+
+                                    <h4 class="service__title">Бразильский маникюр</h4>
+                                    <p class="service__dicr">Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном</p>
+                                    <button class="base-button base-button--small">Записаться</button>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+
+                                <div class="service">
+                                    <div class="service__picture">
+                                        <img class="service__img" src="./images/service-img.png" alt="">
+                                    </div>
+
+                                    <h4 class="service__title">Педикюр</h4>
+                                    <p class="service__dicr">Аппаратный, комбинированный или классический</p>
+                                    <button class="base-button base-button--small">Записаться</button>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+
+                                <div class="service">
+                                    <div class="service__picture">
+                                        <img class="service__img" src="./images/service-img.png" alt="">
+                                    </div>
+
+                                    <h4 class="service__title">Парафинотерапия</h4>
+                                    <p class="service__dicr">
+                                        Благодаря этой процедуре увлажнение кожи увеличивается на 80%, 
+                                        также выводит токсины и укрепляет суставы.
+                                    </p>
+                                    <button class="base-button base-button--small">Записаться</button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+             </section>
 
         </main>
 
@@ -168,18 +270,18 @@
                         <a class="footer-info__privacy-policy" href="">Политика конфидециальности</a>
                     </div>
 
-                    <nav class="navigation">
+                    <nav class="navigation footer__nav">
                         <ul class="navigation__list">
                             <li class="navigation__item">
-                                <a class="navigation__link navigation__link--small-size" href="#">Услуги и цены</a>
+                                <a class="navigation__link" href="#">Услуги и цены</a>
                             </li>
 
                             <li class="navigation__item">
-                                <a class="navigation__link navigation__link--small-size" href="#">Мастера</a>
+                                <a class="navigation__link" href="#">Мастера</a>
                             </li>
 
                             <li class="navigation__item">
-                                <a class="navigation__link navigation__link--small-size" href="#">Наши работы</a>
+                                <a class="navigation__link" href="#">Наши работы</a>
                             </li>
 
                             <li class="navigation__item">
