@@ -1,4 +1,4 @@
-const { src, dest, parallel, series } = require('gulp');
+const { src, dest, series, watch, parallel } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const clean = require('gulp-clean');
 const browserSync = require('browser-sync').create();
@@ -42,8 +42,6 @@ function buildSassDev() {
         .pipe(dest('dist/css'))
 }
 
-
-
 // Таск работы с html файлами
 function buildHtml() {
     return src('src/**/*.html')
@@ -53,7 +51,7 @@ function buildHtml() {
 
 // Таск копирования статичных файлов
 function copy() {
-    return src(['src/assets/**/*.*']).pipe(dest('dist/assets'));
+    return src(['src/assets/**/*.*'], { base: 'src' }).pipe(dest('dist/assets'));
 }
 
 // Таск очистки dist
@@ -75,12 +73,5 @@ function createDevServer() {
     })
 }
 
-exports.sass = buildSass;
-exports.html = buildHtml;
-exports.copy = copy;
-exports.cleanDist = cleanDist;
-exports.watch = serve;
-exports.createDevServer = createDevServer;
-
 exports.build = series(cleanDist, parallel(cleanDist, buildSass, buildHtml, copy));
-exports.default = series(buildSassDev, parallel(createDevServer, serve));
+exports.default = series(buildSassDev, parallel(createDevServer, serve, copy));
