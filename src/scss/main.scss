@@ -49,6 +49,11 @@ html, body, .wrapper {
 
 .section {
     padding: 50px 0px;
+
+    &--grey {
+        background-color: #F8F6F7;
+        ;
+    }
 }
 
 .section__section-top {
@@ -375,6 +380,44 @@ html, body, .wrapper {
     font-size: 12px;
     font-weight: 400;
     margin: 8px 0 16px 0;
+}
+
+/* Стили раздела "Мастера" */
+
+.master {
+
+    &__picture {
+
+        height: 300px;
+        width: 255px;
+        border-radius: 8px;
+    }
+
+    &__title {
+        margin: 20px 0 0 0;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &__dicr {
+        margin: 8px 0 0 0;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__excperience {
+        margin: 20px 0 0 0;
+        font-size: 12px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+.masters-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 32px 0 32px 0;
+    }
+
 }
 
 @import 'media';
