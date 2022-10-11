@@ -98,6 +98,17 @@ html, body, .wrapper {
     font-weight: 500;
     font-size: 14px;
     transition: 0.15 color;
+
+    &--tab-nav{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17.07px;
+    }
+
+    &--tab-nav:focus {
+        color: #00BF78;
+        text-decoration: underline;
+    }
 }
 
 .navigation__link:hover {
@@ -446,6 +457,36 @@ html, body, .wrapper {
     font-weight: 400;
     }
 
+}
+
+/*Раздел "Услуги и цены"*/
+
+.price {
+    margin-top: 57px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__service-name {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.94px;
+    }
+
+    &__discription {
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17.07px;
+    }
+
+    &__cost {
+        color: #00BF78;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24.38px;
+        margin-right: 190px;
+    }
 }
 
 @import 'media';
