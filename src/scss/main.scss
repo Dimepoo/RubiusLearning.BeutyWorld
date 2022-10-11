@@ -10,6 +10,63 @@
     background-color: #F8F6F7;
     overflow: hidden;
     background: url("./../assets/images/header_background_image.png");
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 90px 0 130px 0;
+    }
+    
+    &__hero {
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        align-items: flex-start;
+    }
+
+    &__top {
+        padding: 30px 0;
+        align-items: baseline;
+    }
+
+    &__main-image {
+        height: 510px;
+        width: 524px;
+        position: absolute;
+        bottom: 0;
+        right: 80px;
+    }
+    
+    &__main-image::after {
+        content:'';
+        background: url("./../assets/images/makiiazh-devushka.png");
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        z-index: 2;
+    }
+    
+    &__main-image::before {
+        content: '';
+        width: 472px;
+        height: 472px;
+        background-color: #FB9475;
+        position: absolute;
+        bottom: -110px;
+        right: 0;
+        border-radius: 50%;
+        z-index: 0;
+    }
+    
+    &__social {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        padding: 0;
+        
+    }
 }
 
 .header__top,
@@ -18,11 +75,6 @@
     justify-content: space-between;
     position: relative;
     z-index: 2;
-}
-
-.header__top {
-    padding: 30px 0;
-    align-items: baseline;
 }
 
 .footer__content {
@@ -52,22 +104,58 @@ html, body, .wrapper {
 
     &--grey {
         background-color: #F8F6F7;
-        ;
+    }
+
+    &__section-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+
+    &__section-top-title {
+        font-family: inherit;
+        font-size: 48px;
+        font-weight: 700;
+        margin: 0;
     }
 }
 
-.section__section-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 32px;
-}
+.navigation {
 
-.section-top__section-top-title {
-    font-family: inherit;
-    font-size: 48px;
-    font-weight: 700;
-    margin: 0;
+    &__list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 28px;
+    }
+
+    &__link:hover {
+        color:#00BF78;
+    
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 14px;
+        transition: 0.15 color;
+    
+        &--tab-nav{
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 17.07px;
+        }
+    
+        &--tab-nav:focus {
+            color: #00BF78;
+            text-decoration: underline;
+        }
+    }
 }
 
 .phone-worktime-info__phonenumber,
@@ -82,40 +170,6 @@ html, body, .wrapper {
     font-weight: 700;
 }
 
-.navigation__list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    margin: 0;
-    flex-wrap: wrap;
-}
-
-.navigation__item:not(:last-child) {
-    margin-right: 28px;
-}
-
-.navigation__link {
-    font-weight: 500;
-    font-size: 14px;
-    transition: 0.15 color;
-
-    &--tab-nav{
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 17.07px;
-    }
-
-    &--tab-nav:focus {
-        color: #00BF78;
-        text-decoration: underline;
-    }
-}
-
-.navigation__link:hover {
-    color:#00BF78;
-
-}
-
 .footer__nav .navigation__link {
     font-size: 12px;
     font-weight: 400;
@@ -124,44 +178,33 @@ html, body, .wrapper {
 .phone-worktime-info {
     display: flex;
     flex-direction: column;
+
+    &__phonenumber {
+        font-size: 18px;
+        font-weight: 500;
+        text-align: right;
+    }
+    
+    &__worktime {
+        font-size: 11px;
+        font-weight: 400;
+        text-align: right;
+    }
 }
 
-.phone-worktime-info__phonenumber {
-    font-size: 18px;
-    font-weight: 500;
-    text-align: right;
-}
+.hero {
+    &__title {
+        font-size: 48px;
+        font-weight: 600;
+        margin: 0;
+    }
+    
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 59px;
+    }
 
-.phone-worktime-info__worktime {
-    font-size: 11px;
-    font-weight: 400;
-    text-align: right;
-}
-
-.header__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 90px 0 130px 0;
-}
-
-.header__hero {
-    display: flex;
-    flex-direction: column;
-    max-width: 540px;
-    align-items: flex-start;
-}
-
-.hero__title {
-    font-size: 48px;
-    font-weight: 600;
-    margin: 0;
-}
-
-.hero__subtitle {
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 59px;
 }
 
 .base-button {
@@ -170,77 +213,43 @@ html, body, .wrapper {
     border-width: 0;
     color: #FFF;
     font-family: inherit;
+
+    &--large {
+        padding: 17px 30px;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 24px;
+    }
+
+    &--small {
+        padding: 10px 20px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 17px;
+    }
 }
 
-.base-button--large {
-    padding: 17px 30px;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 24px;
-}
+.social {
 
-.base-button--small {
-    padding: 10px 20px;
-    font-size: 12px;
-    font-weight: 500;
-    border-radius: 17px;
-}
-
-.header__main-image {
-    height: 510px;
-    width: 524px;
-    position: absolute;
-    bottom: 0;
-    right: 80px;
-}
-
-.header__main-image::after {
-    content:'';
-    background: url("./../assets/images/makiiazh-devushka.png");
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    z-index: 2;
-}
-
-.header__main-image::before {
-    content: '';
-    width: 472px;
-    height: 472px;
-    background-color: #FB9475;
-    position: absolute;
-    bottom: -110px;
-    right: 0;
-    border-radius: 50%;
-    z-index: 0;
-}
-
-.header__social {
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-    padding: 0;
+    &__item {
+        text-decoration: none;
+        display: block;
+        width: 28px;
+        height: 28px;
+    }
     
-}
+    &__item:not(:last-child) {
+        margin: 0 20px 0 0;
+    }
+    
+    &--vertical {
+        flex-direction: column;
+    }
+    
+    &--vertical, &__item:not(:last-child) {
+        margin: 0 0 20px 0;
+    }
 
-.social__item {
-    text-decoration: none;
-    display: block;
-    width: 28px;
-    height: 28px;
-}
-
-.social__item:not(:last-child) {
-    margin: 0 20px 0 0;
-}
-
-.social--vertical {
-    flex-direction: column;
-}
-
-.social--vertical .social__item:not(:last-child) {
-    margin: 0 0 20px 0;
 }
 
 .section__section-content,
@@ -254,21 +263,25 @@ html, body, .wrapper {
     flex-direction: row;
 }
 
-.about-text-content__subheader {
-    font-family: inherit;
-    font-size: 20px;
-    font-weight: 400;
-    max-width: 570px;
-    margin: 0 0 16px 0;
-    line-height: 32px;
-}
+.about-text-content {
 
-.about-text-content__text {
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 400;
-    max-width: 538px;
-    line-height: 26px;
+    &__subheader {
+        font-family: inherit;
+        font-size: 20px;
+        font-weight: 400;
+        max-width: 570px;
+        margin: 0 0 16px 0;
+        line-height: 32px;
+    }
+    
+    &__text {
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 538px;
+        line-height: 26px;
+    }
+
 }
 
 .about-image-content{
@@ -277,30 +290,34 @@ html, body, .wrapper {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./../assets/images/video_about_us.png");
     border-radius: 8px;
     position: relative;
+
+    &__image-inner-elem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25%;
+    }
 }
 
-.about-image-content__image-inner-elem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25%;
-}
+.image-inner-elem {
 
-.image-inner-elem__play-button {
-    content: '';
-    width: 61px;
-    height: 61px;
-    background: url("./../assets/images/play-video.png");
-    cursor: pointer;
-}
+    &__play-button {
+        content: '';
+        width: 61px;
+        height: 61px;
+        background: url("./../assets/images/play-video.png");
+        cursor: pointer;
+    }
+    
+    &__text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        font-family: inherit;
+        color: #FFF;
+        text-align: center;
+    }
 
-.image-inner-elem__text {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 26px;
-    font-family: inherit;
-    color: #FFF;
-    text-align: center;
 }
 
 .footer-info__copyright {
@@ -311,48 +328,52 @@ html, body, .wrapper {
     display: flex;
     justify-content: space-around;
     padding-top: 100px;
+
+    &__advantage-item {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+    }
 }
 
-.about-advantage-content__advantage-item {
-    display: flex;
-    flex-direction: column;
-    max-width: 350px;
-}
+.advantage-item {
 
-.advantage-item__subtitle {
-    font-size: 18px;
-    font-weight: 600;
-    font-family: inherit;
-    margin-top: 20px;
-    text-align: center;
-}
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: inherit;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    &__cabinets-text,
+    &__cosmetics-text,
+    &__masters-text {
+        font-size: 14px;
+        font-weight: 400;
+        font-family: inherit;
+        margin-top: 12px;
+        text-align: center;
+    }
+    
+    &__img {
+        width: 48px;
+        height: 48px;
+        align-self: center;
+    }
+    
+    &__cabinets-text {
+        max-width: 296px;
+    }
+    
+    &__cosmetics-text {
+        max-width: 255px;
+    }
+    
+    &__masters-text {
+        max-width: 263px;
+    }
 
-.advantage-item__cabinets-text,
-.advantage-item__cosmetics-text,
-.advantage-item__masters-text {
-    font-size: 14px;
-    font-weight: 400;
-    font-family: inherit;
-    margin-top: 12px;
-    text-align: center;
-}
-
-.advantage-item__img {
-    width: 48px;
-    height: 48px;
-    align-self: center;
-}
-
-.advantage-item__cabinets-text {
-    max-width: 296px;
-}
-
-.advantage-item__cosmetics-text {
-    max-width: 255px;
-}
-
-.advantage-item__masters-text {
-    max-width: 263px;
 }
 
 .footer-info {
@@ -364,34 +385,34 @@ html, body, .wrapper {
 
 .services {
     margin-top: -40px;
-}
 
-.services > div {
-    margin-top: 48px;
-}
-
-.service__picture {
-    width: 350px;
-    height: 180px;
-    border-radius: 8px;
-}
-
-.service__img {
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-}
-
-.service__title {
-    font-size: 18px;
-    font-weight: 800;
-    margin: 20px 0 0 0;
-}
-
-.service__dicr {
-    font-size: 12px;
-    font-weight: 400;
-    margin: 8px 0 16px 0;
+    & > div {
+        margin-top: 48px;
+    }
+    
+    &__picture {
+        width: 350px;
+        height: 180px;
+        border-radius: 8px;
+    }
+    
+    &__img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+    
+    &__title {
+        font-size: 18px;
+        font-weight: 800;
+        margin: 20px 0 0 0;
+    }
+    
+    &__dicr {
+        font-size: 12px;
+        font-weight: 400;
+        margin: 8px 0 16px 0;
+    }
 }
 
 /* Стили раздела "Мастера" */
