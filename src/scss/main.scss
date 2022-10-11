@@ -385,12 +385,41 @@ html, body, .wrapper {
 /* Стили раздела "Мастера" */
 
 .master {
+    margin-top: 24px;
 
     &__picture {
-
+        display: flex;
+        justify-content: center;
         height: 300px;
         width: 255px;
         border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__picture:hover::before {
+        content: '';
+        align-self: center;
+        position: absolute;
+        background-color: #000;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        z-index: 1;
+    }
+
+    &__picture:hover::after {
+        content:'Записаться \0a к мастеру';
+        white-space: pre;
+        text-align: center;
+        align-self: center;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        color: #FFF;
+        position: absolute;
+        z-index: 2;
     }
 
     &__title {
@@ -415,7 +444,6 @@ html, body, .wrapper {
 .masters-subtitle {
     font-size: 16px;
     font-weight: 400;
-    margin: 32px 0 32px 0;
     }
 
 }

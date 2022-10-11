@@ -39,7 +39,8 @@ function buildSassDev() {
                 cssnano()
             ])
         )
-        .pipe(dest('dist/css'))
+        .pipe(dest('src/css'))
+        .pipe(browserSync.stream());
 }
 
 // Таск работы с html файлами
