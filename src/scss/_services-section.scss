@@ -1,0 +1,33 @@
+/* Стили раздела "Популярные услуги" */
+
+.services {
+    margin-top: -40px;
+
+    & > div {
+        margin-top: 48px;
+    }
+    
+    &__picture {
+        width: 350px;
+        height: 180px;
+        border-radius: 8px;
+    }
+    
+    &__img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+    
+    &__title {
+        font-size: 18px;
+        font-weight: 800;
+        margin: 20px 0 0 0;
+    }
+    
+    &__dicr {
+        font-size: 12px;
+        font-weight: 400;
+        margin: 8px 0 16px 0;
+    }
+}

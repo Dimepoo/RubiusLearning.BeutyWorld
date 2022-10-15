@@ -1,0 +1,28 @@
+.footer {
+    flex-shrink: 0;
+
+    &__content {
+        padding: 20px 0;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__nav .navigation__link {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+.footer-info {
+
+    font-size: 12px;
+    font-weight: 400;
+
+    &__copyright {
+        margin-bottom: 8px;
+    }
+}
+
+}
