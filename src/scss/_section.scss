@@ -1,0 +1,38 @@
+.section {
+    padding: 50px 0px;
+
+    &--grey {
+        background-color: #F8F6F7;
+    }
+
+    &__section-top {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+
+    &__section-top-title {
+
+        font-family: inherit;
+        font-size: 48px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__section-content {
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        
+    }
+}
+
+.section-content__about-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}

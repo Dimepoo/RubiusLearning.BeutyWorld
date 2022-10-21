@@ -1,0 +1,38 @@
+{
+  "name": "rubiuslearning.beutyworld",
+  "version": "1.0.0",
+  "description": "Савельев Дмитрий Васильевич",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dimepoo/RubiusLearning.BeutyWorld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dimepoo/RubiusLearning.BeutyWorld/issues"
+  },
+  "homepage": "https://github.com/Dimepoo/RubiusLearning.BeutyWorld#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.13",
+    "file-loader": "^6.2.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.17",
+    "sass": "^1.55.0",
+    "url-loader": "^4.1.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "normalize.css": "^8.0.1"
+  }
+}

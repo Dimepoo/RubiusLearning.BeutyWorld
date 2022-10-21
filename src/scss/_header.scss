@@ -1,0 +1,106 @@
+.header {
+
+    background-color: #F8F6F7;
+    overflow: hidden;
+    background: url("./../assets/images/header_background_image.png");
+    position: relative;
+    flex-shrink: 0;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 90px 0 130px 0;
+    }
+    
+    &__hero {
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        align-items: flex-start;
+        z-index: 2;
+    }
+
+    &__top {
+        padding: 30px 0;
+        align-items: baseline;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        flex-shrink: 0;
+        z-index: 2;
+    }
+
+    &__main-image {
+        height: 510px;
+        width: 524px;
+        position: absolute;
+        bottom: 0;
+        right: 80px;
+        transition: 0.15s opacity;
+    }
+    
+    &__main-image::after {
+        content:'';
+        background: url("./../assets/images/makiiazh-devushka.png");
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        z-index: 1;
+    }
+    
+    &__main-image::before {
+        content: '';
+        width: 472px;
+        height: 472px;
+        background-color: #FB9475;
+        position: absolute;
+        bottom: -110px;
+        right: 0;
+        border-radius: 50%;
+        z-index: 0;
+    }
+    
+    &__social {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        padding: 0;
+        
+    }
+}
+
+.phone-worktime-info {
+    display: flex;
+    flex-direction: column;
+
+    &__phonenumber {
+        font-size: 18px;
+        font-weight: 500;
+        text-align: right;
+        color: #333;
+        text-decoration: none;
+    }
+    
+    &__worktime {
+        font-size: 11px;
+        font-weight: 400;
+        text-align: right;
+    }
+}
+
+.hero {
+    &__title {
+        font-size: 48px;
+        font-weight: 600;
+        margin: 0;
+    }
+    
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 59px;
+    }
+
+}
