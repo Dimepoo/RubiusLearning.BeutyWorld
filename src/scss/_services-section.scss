@@ -1,7 +1,6 @@
 /* Стили раздела "Популярные услуги" */
 
-.services {
-    margin-top: -40px;
+.service {
 
     & > div {
         margin-top: 48px;
@@ -29,5 +28,11 @@
         font-size: 12px;
         font-weight: 400;
         margin: 8px 0 16px 0;
+        line-height: 20px;
     }
+}
+
+.negative-margin-container {
+
+    margin-top: -48px;
 }

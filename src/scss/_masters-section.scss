@@ -1,7 +1,10 @@
 /* Стили раздела "Мастера" */
 
 .master {
-    margin-top: 24px;
+
+    & > div {
+        margin-top: 24px;
+    }
 
     &__picture {
         display: flex;

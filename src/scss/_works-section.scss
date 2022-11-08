@@ -1,0 +1,105 @@
+.work{
+
+    &__picture {
+        display: flex;
+        justify-content: center;
+        height: 338px;
+        width: 338px;
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__picture:hover{
+        width: 372px;
+        height: 372px;;
+        z-index: 2;
+    }
+
+    &__picture:hover::before {
+        content: '';
+        align-self: center;
+        position: absolute;
+        background-color: #000;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        z-index: 3;
+    }
+
+    &__picture:hover::after {
+        content:'Записаться \0a к мастеру';
+        white-space: pre;
+        text-align: center;
+        align-self: center;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        color: #FFF;
+        position: absolute;
+        z-index: 4;
+    }
+}
+
+.using-brands{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+
+    &__discr {
+
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.5px;
+        font-family: inherit;
+    }
+
+    &__brands {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 40px;
+        align-items: center;
+    }
+}
+
+.brands {
+
+    &__img {
+        
+        width: fit-content;
+        height: fit-content;
+        opacity: 0.35;
+
+        &--wella {
+
+            padding: 0 33px;
+        }
+
+        &--schwarzkopf {
+
+            padding: 0 20px;
+        }
+
+        &--tigi {
+
+            padding: 0 26px;
+        }
+
+        &--londa {
+
+            padding: 0 23px;
+        }
+
+        &--nioxin {
+
+            padding: 0;
+        }
+    }
+}
