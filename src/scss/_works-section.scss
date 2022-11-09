@@ -11,31 +11,38 @@
     }
 
     &__picture:hover{
-        width: 372px;
-        height: 372px;;
+        scale: 1.1;
         z-index: 2;
     }
 
     &__picture:hover::before {
-        content: '';
-        align-self: center;
-        position: absolute;
-        background-color: #000;
-        opacity: 0.5;
+        content:"";
         width: 100%;
         height: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        opacity: 0.5;
         border-radius: 8px;
         z-index: 3;
     }
 
     &__picture:hover::after {
-        content:'Записаться \0a к мастеру';
+        content: url("./../assets/images/search.png") '\0aУвеличить';
         white-space: pre;
-        text-align: center;
-        align-self: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         font-size: 14px;
         font-weight: 500;
         line-height: 17px;
+        text-align: center;
         color: #FFF;
         position: absolute;
         z-index: 4;
