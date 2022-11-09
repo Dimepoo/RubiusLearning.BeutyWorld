@@ -20,18 +20,11 @@
 
         display: flex;
         justify-content: space-between;
-        flex-direction: column;  
+        flex-direction: column;
 
         &--top--margin--minus--48px {
 
             margin-top: -48px;
-        }
-
-        &--absolute {
-
-            position: absolute;
-            flex-shrink: 0;
-            display: flex;
         }
     }
 }

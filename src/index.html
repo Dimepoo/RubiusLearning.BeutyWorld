@@ -109,20 +109,20 @@
 
                     </div>
 
-                    <ul class="social social--vertical header__social">
-                        <li class="social__item">
+                    <ul class="social-list social-list--vertical header__social-list">
+                        <li class="social-element-vertical">
                           <a href="#" class="social__link">
                             <img src="./assets/images/vk-link.png">
                           </a>
                         </li>
                 
-                        <li class="social__item">
+                        <li class="social-element-vertical">
                           <a href="#" class="social__link">
                             <img src="./assets/images/inst-link.png">
                           </a>
                         </li>
                 
-                        <li class="social__item">
+                        <li class="social-element-vertical">
                           <a href="#" class="social__link">
                             <img src="./assets/images/youtube-link.png">
                           </a>
@@ -149,9 +149,9 @@
 
                     <div class="section-content section__section-content">
 
-                            <div class="section-content__about-info">
+                            <div class="about-info">
 
-                                <div class="about-text-content">
+                                <div class="about-text-content about-info__about-text-content">
                             
                                     <p class="about-text-content__subheader">Мир красоты - это уютный салон в самом центре города. 
                                         Здесь работют профессиональные визажисты, стилисты и мастера татуажа</p>
@@ -161,7 +161,7 @@
         
                                 </div>
         
-                                <div class="about-image-content">
+                                <div class="about-image-content about-info__about-image-content">
                                     <div class="image-inner-elem about-image-content__image-inner-elem">
                                         <div class="image-inner-elem__play-button"></div>
                                         <div class="image-inner-elem__text">Короткое видео о нас</div>
@@ -211,7 +211,7 @@
                         </h2>
                     </div>
 
-                    <div class="section-content section__section-content--top--margin--minus--48px">
+                    <div class="section-content section__section-content section__section-content--top--margin--minus--48px">
                         <div class="row">
                             
                             <div class="col-lg-4 col-md-6 col-sm-12">
@@ -703,82 +703,79 @@
              </section>
 
            <!-- Раздел "Контакты" -->
-           <section id="masters" class="section section--grey">
+           <section id="contacts" class="section section--grey">
 
             <div class="main-container">
 
                 <div class="section-top section__section-top">
                     <h2 class="section-top__section-top-title">
-                        Мастера
+                        Контакты
                     </h2>
                 </div>
 
                 <div class="section-content section__section-content">
 
-                    <div class="masters-subtitle">Дружная команда настоящих профессионалов</div>
+                    <div class="contacts-content section-content__contacts-content">
 
-                    <div class="row">
-                        
-                        <div class="col-lg-3">
+                        <div class="contacts-info contacts-content__contacts-info">
 
-                            <div class="master">
-                                <div class="master__picture">
-                                    <img class="master__img" src="./assets/images/master-1.png" alt="">
-                                </div>
+                            <p class="contacts-info__adress">Томск, Проспект Ленина, дом 13</p>
+    
+                            <a class="contacts-info__number" href="tel:84996861762">8 (499) 686-17-62</a>
+    
+                            <a class="contacts-info__email" href="http:\\vk.com">info@more-krasoty.ru</a>
+                            
+                            <div class="contact-links contacts-info__contacts-links">
+                                
+                                <p class="contact-links__subheader">Мы в социальных сетях</p>
+    
+                                <ul class="social-list">
+                                    <li class="social-element-horizontal">
+                                      <a href="#" class="social__link">
+                                        <img src="./assets/images/vk-link.png">
+                                      </a>
+                                    </li>
+                            
+                                    <li class="social-element-horizontal">
+                                      <a href="#" class="social__link">
+                                        <img src="./assets/images/inst-link.png">
+                                      </a>
+                                    </li>
+                            
+                                    <li class="social-element-horizontal">
+                                      <a href="#" class="social__link">
+                                        <img src="./assets/images/youtube-link.png">
+                                      </a>
+                                    </li>
+                                </ul>
+    
+                            </div>
+    
+                        </div>
+    
+                        <div class="quick-record-form contacts-content__quick-record-form">
+    
+                            <h4 class="quick-record-form__title">Быстрая запись</h4>
+                            <p class="quick-record-form__description">Наш менеджер перезвонит в течении нескольких минут,
+                                уточнит подробности и согласует время
+                            </p>    
 
-                                <h4 class="master__title">Краснова Ирина</h4>
-                                <p class="master__dicr">Мастер ногтевого сервиса</p>
-                                <p class="master__excperience">опыт работы 5 лет</p>
+                            <div class="input-area quick-record-form__input-area">
+
+                                <input type="text" placeholder="Ваше имя" class="input-area__name-input">
+                                <input type="tel" placeholder="+7 (___) ___-__-__" class="input-area__phone-input">
+                                <button class="base-button base-button--large">
+                                    Записаться
+                                </button>
 
                             </div>
+                            
+                            <p class="quick-record-form__accepting">Нажимая на кнопку 
+                                вы соглашаетесь с <a href="">обработкой персональных данных</a></p>
                         </div>
-
-                        <div class="col-lg-3">
-
-                            <div class="master">
-                                <div class="master__picture">
-                                    <img class="master__img" src="./assets/images/master-2.png" alt="">
-                                </div>
-
-                                <h4 class="master__title">Калилова Жанна</h4>
-                                <p class="master__dicr">Визажист-стилист</p>
-                                <p class="master__excperience">опыт работы 5 лет</p>
-
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3">
-
-                            <div class="master">
-                                <div class="master__picture">
-                                    <img class="master__img" src="./assets/images/master-3.png" alt="">
-                                </div>
-
-                                <h4 class="master__title">Киселева Алина</h4>
-                                <p class="master__dicr">Парикмахер</p>
-                                <p class="master__excperience">опыт работы 5 лет</p>
-
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3">
-
-                            <div class="master">
-                                <div class="master__picture">
-                                    <img class="master__img" src="./assets/images/master-4.png" alt="">
-                                </div>
-
-                                <h4 class="master__title">Иванова Елена</h4>
-                                <p class="master__dicr">Мастер ногтевого сервиса</p>
-                                <p class="master__excperience">опыт работы 5 лет</p>
-
-                            </div>
-                        </div>
-
-
                     </div>
+                   
                 </div>
-
 
             </div>
 

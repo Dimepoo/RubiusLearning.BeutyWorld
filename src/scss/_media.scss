@@ -39,18 +39,17 @@
         &__hero {
             align-items: center;
         }
-
-        &__social {
-            flex-direction: row;
-            padding-top: 76px;
-        }
     }
 
-    .social {
+    .social-list {
         
-        &--vertical, &__item:not(:last-child) {
-            margin: 0 20px 0 0;
-        }
+        flex-direction: row;
+        padding-top: 76px;
+    }
+
+    .social-element-vertical:not(:last-child) {
+
+        margin: 0 20px 0 0;
     }
 
     .hero {
