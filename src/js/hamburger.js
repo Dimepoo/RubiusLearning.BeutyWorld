@@ -1,3 +1,5 @@
+const body = document.querySelector('body');
+
 window.onload = () => { 
 
     const hamburgerBtn = document.querySelector('.hamburger-navigation__toggle').querySelector("input");
@@ -8,10 +10,18 @@ window.onload = () => {
         if(event.target.checked)
         {
             mobileMenu.classList.add('visible');
+            disableScroll();
         }
         else
         {
             mobileMenu.classList.remove('visible'); 
+            enableScroll();
         } 
     }); 
   };
+
+  const disableScroll = () => body.classList.add('noscroll');
+
+  const enableScroll = () =>  body.classList.remove('noscroll');
+
+ 
