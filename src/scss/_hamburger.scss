@@ -1,5 +1,8 @@
 .hamburger {
-  visibility: hidden;
+
+  background-color: transparent;
+  border-width: 0;
+  display: none;
 }
  
  #menuToggle
@@ -55,7 +58,7 @@
    margin-bottom: 5px;
    position: relative;
    
-   background: #cdcdcd;
+   background: #666;
    border-radius: 3px;
    
    z-index: 1;

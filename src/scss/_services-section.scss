@@ -1,11 +1,17 @@
 /* Стили раздела "Популярные услуги" */
 
-.services {
-    margin-top: -40px;
+.service-card {
 
-    & > div {
-        margin-top: 48px;
-    }
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-data {
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
     
     &__picture {
         width: 350px;
@@ -18,16 +24,30 @@
         width: auto;
         object-fit: cover;
     }
-    
+}
+
+.service-info {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 350px;
+
     &__title {
         font-size: 18px;
         font-weight: 800;
         margin: 20px 0 0 0;
     }
     
-    &__dicr {
+    &__description {
         font-size: 12px;
         font-weight: 400;
         margin: 8px 0 16px 0;
+        line-height: 20px;
     }
+}
+
+.negative-margin-container {
+
+    margin-top: -48px;
 }

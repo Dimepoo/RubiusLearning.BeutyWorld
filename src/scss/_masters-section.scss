@@ -1,6 +1,16 @@
 /* Стили раздела "Мастера" */
 
-.master {
+.master-card {
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.master-data {
+
+    display: flex;
+    flex-direction: column;
     margin-top: 24px;
 
     &__picture {
@@ -37,6 +47,12 @@
         position: absolute;
         z-index: 2;
     }
+}
+
+.master-info {
+
+    display: flex;
+    flex-direction: column;
 
     &__title {
         margin: 20px 0 0 0;
@@ -44,7 +60,7 @@
         font-weight: 600;
     }
 
-    &__dicr {
+    &__description {
         margin: 8px 0 0 0;
         font-size: 14px;
         font-weight: 400;
@@ -56,10 +72,9 @@
         font-weight: 300;
         text-transform: uppercase;
     }
+}
 
 .masters-subtitle {
     font-size: 16px;
     font-weight: 400;
     }
-
-}

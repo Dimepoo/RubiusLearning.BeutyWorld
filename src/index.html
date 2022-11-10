@@ -17,7 +17,7 @@
     <div class="wrapper">
 
         <header class="header">
-            <div class="container">
+            <div class="main-container">
 
                 <div class="header__main-image">
 
@@ -25,45 +25,29 @@
 
                 <div class="header__top">
 
-                    <div>
-                        <button id="mobile-menu-button" class="hamburger">
-                            <!--    Made by Erik Terwan    -->
-    <!--   24th of November 2015   -->
-    <!--        MIT License        -->
-    <nav role="navigation">
-        <div id="menuToggle">
-        <!--
-        A fake / hidden checkbox is used as click reciever,
-        so you can use the :checked selector on it.
-        -->
-        <input type="checkbox" />
-        
-        <!--
-        Some spans to act as a hamburger.
-        
-        They are acting like a real hamburger,
-        not that McDonalds stuff.
-        -->
-        <span></span>
-        <span></span>
-        <span></span>
-        
-        <!--
-        Too bad the menu has to be inside of the button
-        but hey, it's pure CSS magic.
-        -->
-        <ul id="menu">
-            <a href="#"><li>Home</li></a>
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Info</li></a>
-            <a href="#"><li>Contact</li></a>
-            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-        </ul>
-        </div>
-    </nav>
-</button>
+                    <div class="menu-and-logo">
 
-<a href="" class="logo">Мир красоты</a>
+                        <button id="mobile-menu-button" class="hamburger">
+                            <nav role="navigation">
+                                <div id="menuToggle">
+                                     <input type="checkbox" />
+                                    
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <ul id="menu">
+                                            <a href="#"><li>Home</li></a>
+                                            <a href="#"><li>About</li></a>
+                                            <a href="#"><li>Info</li></a>
+                                            <a href="#"><li>Contact</li></a>
+                                            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                                        </ul>
+                                        </div>
+                            </nav>
+                        </button>
+
+                        <a href="" class="logo">Мир красоты</a>
+                        
                     </div>
 
                     <nav class="navigation header__nav">
@@ -109,20 +93,20 @@
 
                     </div>
 
-                    <ul class="social social--vertical header__social">
-                        <li class="social__item">
+                    <ul class="social-list social-list--vertical header__social-list">
+                        <li class="social-element-vertical">
                           <a href="#" class="social__link">
                             <img src="./assets/images/vk-link.png">
                           </a>
                         </li>
                 
-                        <li class="social__item">
+                        <li class="social-element-vertical">
                           <a href="#" class="social__link">
                             <img src="./assets/images/inst-link.png">
                           </a>
                         </li>
                 
-                        <li class="social__item">
+                        <li class="social-element-vertical">
                           <a href="#" class="social__link">
                             <img src="./assets/images/youtube-link.png">
                           </a>
@@ -139,7 +123,7 @@
             <!-- Раздел "О нас" -->
             <section id="about" class="section">
 
-                <div class="container">
+                <div class="main-container">
 
                     <div class="section-top section__section-top">
                         <h2 class="section-top__section-top-title">
@@ -149,9 +133,9 @@
 
                     <div class="section-content section__section-content">
 
-                            <div class="section-content__about-info">
+                            <div class="about-info">
 
-                                <div class="about-text-content">
+                                <div class="about-text-content about-info__about-text-content">
                             
                                     <p class="about-text-content__subheader">Мир красоты - это уютный салон в самом центре города. 
                                         Здесь работют профессиональные визажисты, стилисты и мастера татуажа</p>
@@ -161,7 +145,7 @@
         
                                 </div>
         
-                                <div class="about-image-content">
+                                <div class="about-image-content about-info__about-image-content">
                                     <div class="image-inner-elem about-image-content__image-inner-elem">
                                         <div class="image-inner-elem__play-button"></div>
                                         <div class="image-inner-elem__text">Короткое видео о нас</div>
@@ -203,7 +187,7 @@
             <!-- Раздел "Популярные услуги" -->
             <section id="popular-services" class="section">
 
-                <div class="container">
+                <div class="main-container">
 
                     <div class="section-top section__section-top">
                         <h2 class="section-top__section-top-title">
@@ -211,97 +195,116 @@
                         </h2>
                     </div>
 
-                    <div class="section-content section__section-content">
-                        <div class="row services">
+                    <div class="section-content section__section-content section__section-content--top--margin--minus--48px">
+                        <div class="row">
                             
                             <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="service-card">
+                                    <div class="service-data service-card__service-data">
 
-                                <div class="service">
-                                    <div class="service__picture">
-                                        <img class="service__img" src="./assets/images/service-img.png" alt="">
+                                        <div class="service-data__picture">
+                                            <img src="./assets/images/service-img.png" alt="">
+                                        </div>
+
+                                        <div class="service-info service-data__service-info">
+                                            <h4 class="service-info__title">Маникюр</h4>
+                                            <p class="service-info__description">Аппаратный, комбинированный или классический</p>
+                                            <button class="base-button base-button--small">Записаться</button>
+                                        </div>
+
                                     </div>
+                                </div>
+                            </div>
 
-                                    <h4 class="service__title">Маникюр</h4>
-                                    <p class="service__dicr">Аппаратный, комбинированный или классический</p>
-                                    <button class="base-button base-button--small">Записаться</button>
+                            <div class="col-lg-4 col-md-6 col-sm-12">                              
+                                <div class="service-card">
+                                    <div class="service-data service-card__service-data">
 
+                                        <div class="service-data__picture">
+                                            <img src="./assets/images/service-img.png" alt="">
+                                        </div>
+
+                                        <div class="service-info service-data__service-info">
+                                            <h4 class="service-info__title">Покрытие гель-лак</h4>
+                                            <p class="service-info__description">
+                                                Гель-лак наносится в несколько слоев с использование базы и топа. Каждый слой 
+                                                полимеризуется в LED-лампе
+                                            </p>
+                                            <button class="base-button base-button--small">Записаться</button>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="service-card">
+                                    <div class="service-data service-card__service-data">
 
-                                <div class="service">
-                                    <div class="service__picture">
-                                        <img class="service__img" src="./assets/images/service-img.png" alt="">
+                                        <div class="service-data__picture">
+                                            <img src="./assets/images/service-img.png" alt="">
+                                        </div>
+
+                                        <div class="service-info service-data__service-info">
+                                            <h4 class="service-info__title">Бразильский маникюр</h4>
+                                            <p class="service-info__description">Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном</p>
+                                            <button class="base-button base-button--small">Записаться</button>
+                                        </div>
+
                                     </div>
-
-                                    <h4 class="service__title">Покрытие гель-лак</h4>
-                                    <p class="service__dicr">
-                                        Гель-лак наносится в несколько слоев с использование базы и топа. Каждый слой 
-                                        полимеризуется в LED-лампе
-                                    </p>
-                                    <button class="base-button base-button--small">Записаться</button>
-
                                 </div>
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="service-card">
+                                    <div class="service-data service-card__service-data">
 
-                                <div class="service">
-                                    <div class="service__picture">
-                                        <img class="service__img" src="./assets/images/service-img.png" alt="">
+                                        <div class="service-data__picture">
+                                            <img src="./assets/images/service-img.png" alt="">
+                                        </div>
+
+                                        <div class="service-info service-data__service-info">
+                                            <h4 class="service-info__title">Педикюр</h4>
+                                            <p class="service-info__description">Аппаратный, комбинированный или классический</p>
+                                            <button class="base-button base-button--small">Записаться</button>
+                                        </div>
+
                                     </div>
-
-                                    <h4 class="service__title">Бразильский маникюр</h4>
-                                    <p class="service__dicr">Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном</p>
-                                    <button class="base-button base-button--small">Записаться</button>
-
                                 </div>
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="service-card">
+                                    <div class="service-data service-card__service-data">
 
-                                <div class="service">
-                                    <div class="service__picture">
-                                        <img class="service__img" src="./assets/images/service-img.png" alt="">
+                                        <div class="service-data__picture">
+                                            <img src="./assets/images/service-img.png" alt="">
+                                        </div>
+
+                                        <div class="service-info service-data__service-info">
+                                            <h4 class="service-info__title">Парафинотерапия</h4>
+                                            <p class="service-info__description">
+                                                Благодаря этой процедуре увлажнение кожи увеличивается на 80%, 
+                                                также выводит токсины и укрепляет суставы.
+                                            </p>
+                                            <button class="base-button base-button--small">Записаться</button>
+                                        </div>
+
                                     </div>
-
-                                    <h4 class="service__title">Педикюр</h4>
-                                    <p class="service__dicr">Аппаратный, комбинированный или классический</p>
-                                    <button class="base-button base-button--small">Записаться</button>
-
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-
-                                <div class="service">
-                                    <div class="service__picture">
-                                        <img class="service__img" src="./assets/images/service-img.png" alt="">
-                                    </div>
-
-                                    <h4 class="service__title">Парафинотерапия</h4>
-                                    <p class="service__dicr">
-                                        Благодаря этой процедуре увлажнение кожи увеличивается на 80%, 
-                                        также выводит токсины и укрепляет суставы.
-                                    </p>
-                                    <button class="base-button base-button--small">Записаться</button>
-
                                 </div>
                             </div>
 
                         </div>
                     </div>
 
-
                 </div>
 
              </section>
 
             <!-- Раздел "Услуги и цены" -->
-             <section class="section">
+             <section id="price" class="section">
 
-                <div class="container">
+                <div class="main-container">
 
                     <div class="section-top section__section-top">
                         <h2 class="section-top__section-top-title">
@@ -342,99 +345,96 @@
 
                         <div class="row">
                             
-                            <div class="col-lg-6">
+                            <div class="col-lg-5">
+                                <div class="price-cell">
 
-                                <div class="price">
-
-                                    <div class="price__info">
-
-                                        <div class="price__service-name">
-                                            Женская стрижка
+                                        <div class="prise-info price-cell__price-info">
+    
+                                            <div class="price-info__service-name">
+                                                Женская стрижка
+                                            </div>
+    
+                                            <div class="price-info__description">
+                                                Короткие волосы
+                                            </div>
+    
                                         </div>
-
-                                        <div class="price__discription">
-                                            Короткие волосы
+    
+                                        <div class="price-cell__cost">
+                                            1200 ₽
                                         </div>
-
-                                    </div>
-
-                                    <div class="price__cost">
-                                        1200 ₽
-                                    </div>
-
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-1"></div>
 
-                                <div class="price">
-
-                                    <div class="price__info">
-
-                                        <div class="price__service-name">
-                                            Стрижка бороды и усов
+                            <div class="col-lg-5">
+                                <div class="price-cell">
+                                    
+                                        <div class="prise-info price-cell__price-info">
+    
+                                            <div class="price-info__service-name">
+                                                Стрижка бороды и усов
+                                            </div>
+    
+                                            <div class="price-info__description">
+                                                Короткие волосы
+                                            </div>
+    
                                         </div>
-
-                                        <div class="price__discription">
-                                            Короткие волосы
+    
+                                        <div class="price-cell__cost">
+                                            1200 ₽
                                         </div>
-
-                                    </div>
-
-                                    <div class="price__cost">
-                                        1200 ₽
-                                    </div>
-
                                 </div>
                             </div>
 
                         </div>
 
-                        <div class="row">
-                            
-                            <div class="col-lg-6">
+                        <div class="row">                          
+                            <div class="col-lg-5">
+                                <div class="price-cell">
 
-                                <div class="price">
-
-                                    <div class="price__info">
-
-                                        <div class="price__service-name">
+                                    <div class="prise-info price-cell__price-info">
+    
+                                        <div class="price-info__service-name">
                                             Мужская стрижка
                                         </div>
 
-                                        <div class="price__discription">
+                                        <div class="price-info__description">
                                             Короткие волосы
                                         </div>
 
                                     </div>
 
-                                    <div class="price__cost">
+                                    <div class="price-cell__cost">
                                         1200 ₽
                                     </div>
-
+                                    
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-1"></div>
 
-                                <div class="price">
+                            <div class="col-lg-5">
+                                <div class="price-cell">
 
-                                    <div class="price__info">
-
-                                        <div class="price__service-name">
+                                    <div class="prise-info price-cell__price-info">
+    
+                                        <div class="price-info__service-name">
                                             Экспресс укладка
                                         </div>
 
-                                        <div class="price__discription">
+                                        <div class="price-info__description">
                                             Короткие волосы
                                         </div>
 
                                     </div>
 
-                                    <div class="price__cost">
+                                    <div class="price-cell__cost">
                                         1200 ₽
                                     </div>
-
+                                    
                                 </div>
                             </div>
 
@@ -442,49 +442,49 @@
 
                         <div class="row">
                             
-                            <div class="col-lg-6">
+                            <div class="col-lg-5">
+                                <div class="price-cell">
 
-                                <div class="price">
-
-                                    <div class="price__info">
-
-                                        <div class="price__service-name">
+                                    <div class="prise-info price-cell__price-info">
+    
+                                        <div class="price-info__service-name">
                                             Детский Стиль
                                         </div>
 
-                                        <div class="price__discription">
+                                        <div class="price-info__description">
                                             Короткие волосы
                                         </div>
 
                                     </div>
 
-                                    <div class="price__cost">
+                                    <div class="price-cell__cost">
                                         1200 ₽
                                     </div>
-
+                                    
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-1"></div>
 
-                                <div class="price">
+                            <div class="col-lg-5">
+                                <div class="price-cell">
 
-                                    <div class="price__info">
-
-                                        <div class="price__service-name">
+                                    <div class="prise-info price-cell__price-info">
+    
+                                        <div class="price-info__service-name">
                                             Укладка дневная
                                         </div>
 
-                                        <div class="price__discription">
+                                        <div class="price-info__description">
                                             Короткие волосы
                                         </div>
 
                                     </div>
 
-                                    <div class="price__cost">
+                                    <div class="price-cell__cost">
                                         1200 ₽
                                     </div>
-
+                                    
                                 </div>
                             </div>
 
@@ -492,56 +492,55 @@
 
                         <div class="row">
                             
-                            <div class="col-lg-6">
+                            <div class="col-lg-5">
+                                <div class="price-cell">
 
-                                <div class="price">
-
-                                    <div class="price__info">
-
-                                        <div class="price__service-name">
+                                    <div class="prise-info price-cell__price-info">
+    
+                                        <div class="price-info__service-name">
                                             Креативный Стиль
                                         </div>
 
-                                        <div class="price__discription">
+                                        <div class="price-info__description">
                                             Короткие волосы
                                         </div>
 
                                     </div>
 
-                                    <div class="price__cost">
+                                    <div class="price-cell__cost">
                                         1200 ₽
                                     </div>
-
+                                    
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-1"></div>
 
-                                <div class="price">
+                            <div class="col-lg-5">
+                                <div class="price-cell">
 
-                                    <div class="price__info">
-
-                                        <div class="price__service-name">
+                                    <div class="prise-info price-cell__price-info">
+    
+                                        <div class="price-info__service-name">
                                             Прическа вечерняя (свадебная)
                                         </div>
 
-                                        <div class="price__discription">
+                                        <div class="price-info__description">
                                             Короткие волосы
                                         </div>
 
                                     </div>
 
-                                    <div class="price__cost">
+                                    <div class="price-cell__cost">
                                         3000 ₽
                                     </div>
-
+                                    
                                 </div>
                             </div>
 
                         </div>
                     </div>
-
-
+                    
                 </div>
 
              </section>
@@ -549,7 +548,7 @@
             <!-- Раздел "Мастера" -->
             <section id="masters" class="section section--grey">
 
-                <div class="container">
+                <div class="main-container">
 
                     <div class="section-top section__section-top">
                         <h2 class="section-top__section-top-title">
@@ -561,64 +560,87 @@
 
                         <div class="masters-subtitle">Дружная команда настоящих профессионалов</div>
 
-                        <div class="row">
+                        <div class="row align-items-center">
                             
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                            
+                                <div class="master-card">
+                                    <div class="master-data master-card__master-data">
 
-                                <div class="master">
-                                    <div class="master__picture">
-                                        <img class="master__img" src="./assets/images/master-1.png" alt="">
+                                        <div class="master-data__picture">
+                                            <img src="./assets/images/master-1.png" alt="Фото мастера">
+                                        </div>
+                                        
+                                        <div class="master-info master-data__master-info">
+                                            <h4 class="master-info__title">Краснова Ирина</h4>
+                                            <p class="master-info__description">Мастер ногтевого сервиса</p>
+                                            <p class="master-info__excperience">опыт работы 5 лет</p>
+                                        </div>
+    
                                     </div>
-
-                                    <h4 class="master__title">Краснова Ирина</h4>
-                                    <p class="master__dicr">Мастер ногтевого сервиса</p>
-                                    <p class="master__excperience">опыт работы 5 лет</p>
-
                                 </div>
+
                             </div>
 
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
 
-                                <div class="master">
-                                    <div class="master__picture">
-                                        <img class="master__img" src="./assets/images/master-2.png" alt="">
+                                <div class="master-card">
+                                    <div class="master-data master-card__master-data">
+
+                                        <div class="master-data__picture">
+                                            <img src="./assets/images/master-2.png" alt="Фото мастера">
+                                        </div>
+                                        
+                                        <div class="master-info master-data__master-info">
+                                            <h4 class="master-info__title">Калилова Жанна</h4>
+                                            <p class="master-info__description">Визажист-стилист</p>
+                                            <p class="master-info__excperience">опыт работы 5 лет</p>
+                                        </div>
+    
                                     </div>
-
-                                    <h4 class="master__title">Калилова Жанна</h4>
-                                    <p class="master__dicr">Визажист-стилист</p>
-                                    <p class="master__excperience">опыт работы 5 лет</p>
-
                                 </div>
+
                             </div>
 
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
 
-                                <div class="master">
-                                    <div class="master__picture">
-                                        <img class="master__img" src="./assets/images/master-3.png" alt="">
+                                <div class="master-card">
+                                    <div class="master-data master-card__master-data">
+
+                                        <div class="master-data__picture">
+                                            <img src="./assets/images/master-3.png" alt="Фото мастера">
+                                        </div>
+                                        
+                                        <div class="master-info master-data__master-info">
+                                            <h4 class="master-info__title">Киселева Алина</h4>
+                                            <p class="master-info__description">Парикмахер</p>
+                                            <p class="master-info__excperience">опыт работы 5 лет</p>
+                                        </div>
+    
                                     </div>
-
-                                    <h4 class="master__title">Киселева Алина</h4>
-                                    <p class="master__dicr">Парикмахер</p>
-                                    <p class="master__excperience">опыт работы 5 лет</p>
-
                                 </div>
+
                             </div>
 
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
 
-                                <div class="master">
-                                    <div class="master__picture">
-                                        <img class="master__img" src="./assets/images/master-4.png" alt="">
+                                <div class="master-card">
+                                    <div class="master-data master-card__master-data">
+
+                                        <div class="master-data__picture">
+                                            <img src="./assets/images/master-4.png" alt="Фото мастера">
+                                        </div>
+                                        
+                                        <div class="master-info master-data__master-info">
+                                            <h4 class="master-info__title">Иванова Елена</h4>
+                                            <p class="master-info__description">Мастер ногтевого сервиса</p>
+                                            <p class="master-info__excperience">опыт работы 5 лет</p>
+                                        </div>
+    
                                     </div>
-
-                                    <h4 class="master__title">Иванова Елена</h4>
-                                    <p class="master__dicr">Мастер ногтевого сервиса</p>
-                                    <p class="master__excperience">опыт работы 5 лет</p>
-
                                 </div>
-                            </div>
 
+                            </div>
 
                         </div>
                     </div>
@@ -628,10 +650,195 @@
 
              </section>
 
+            <!-- Раздел "Наши работы" -->
+            <section id="works" class="section">
+
+                <div class="main-container">
+
+                    <div class="section-top section__section-top">
+                        <h2 class="section-top__section-top-title">
+                            Наши работы
+                        </h2>
+
+                        <div class="carousel-buttons">
+
+                            <button class="carousel-button carousel-button--left carousel-buttons__carousel-button">
+                                <img class="carousel-button__img" src="./assets/images/arrow-left.png">
+                            </button>
+
+                            <button class="carousel-button carousel-button--right carousel-buttons__carousel-button">
+                                <img class="carousel-button__img" src="./assets/images/arrow-right.png">
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="section-content section__section-content">
+                    
+                    <div class="works-gallery">
+                        <div class="row">
+                        
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+    
+                                <div class="work">
+                                    <div class="work__picture">
+                                        <img src="./assets/images/work1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+    
+                                <div class="work">
+                                    <div class="work__picture">
+                                        <img src="./assets/images/work2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+    
+                                <div class="work">
+                                    <div class="work__picture">
+                                        <img  src="./assets/images/work3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+    
+                                <div class="work">
+                                    <div class="work__picture">
+                                        <img src="./assets/images/work4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <div class="using-brands">
+
+                        <p class="using-brands__description">Бренды, которые мы используем в работе</p>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="brand-container">
+                                    <img alt="" src="./assets/images/brand1.png">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="brand-container">
+                                    <img alt="" src="./assets/images/brand2.png">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="brand-container">
+                                    <img alt="" src="./assets/images/brand3.png">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="brand-container">
+                                    <img alt="" src="./assets/images/brand4.png">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="brand-container">
+                                    <img alt="" src="./assets/images/brand5.png">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+             </section>
+
+           <!-- Раздел "Контакты" -->
+           <section id="contacts" class="section section--grey">
+
+            <div class="main-container">
+
+                <div class="section-top section__section-top">
+                    <h2 class="section-top__section-top-title">
+                        Контакты
+                    </h2>
+                </div>
+
+                <div class="section-content section__section-content">
+
+                    <div class="contacts-content section-content__contacts-content">
+
+                        <div class="contacts-info contacts-content__contacts-info">
+
+                            <p class="contacts-info__adress">Томск, Проспект Ленина, дом 13</p>
+    
+                            <a class="contacts-info__number" href="tel:84996861762">8 (499) 686-17-62</a>
+    
+                            <a class="contacts-info__email" href="http:\\vk.com">info@more-krasoty.ru</a>
+                            
+                            <div class="contact-links contacts-info__contacts-links">
+                                
+                                <p class="contact-links__subheader">Мы в социальных сетях</p>
+    
+                                <ul class="social-list">
+                                    <li class="social-element-horizontal">
+                                      <a href="#" class="social__link">
+                                        <img src="./assets/images/vk-link.png">
+                                      </a>
+                                    </li>
+                            
+                                    <li class="social-element-horizontal">
+                                      <a href="#" class="social__link">
+                                        <img src="./assets/images/inst-link.png">
+                                      </a>
+                                    </li>
+                            
+                                    <li class="social-element-horizontal">
+                                      <a href="#" class="social__link">
+                                        <img src="./assets/images/youtube-link.png">
+                                      </a>
+                                    </li>
+                                </ul>
+    
+                            </div>
+    
+                        </div>
+    
+                        <div class="quick-record-form contacts-content__quick-record-form">
+    
+                            <h4 class="quick-record-form__title">Быстрая запись</h4>
+                            <p class="quick-record-form__description">Наш менеджер перезвонит в течении нескольких минут,
+                                уточнит подробности и согласует время
+                            </p>    
+
+                            <div class="input-area quick-record-form__input-area">
+
+                                <input type="text" placeholder="Ваше имя" class="input-area__name-input">
+                                <input type="tel" placeholder="+7 (___) ___-__-__" class="input-area__phone-input">
+                                <button class="base-button base-button--large">
+                                    Записаться
+                                </button>
+
+                            </div>
+                            
+                            <p class="quick-record-form__accepting">Нажимая на кнопку 
+                                вы соглашаетесь с <a href="">обработкой персональных данных</a></p>
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+
+         </section>    
+
         </main>
 
         <footer class="footer">
-            <div class="container">
+            <div class="main-container">
                 <div class="footer__content">
                     
                     <div class="footer-info">
