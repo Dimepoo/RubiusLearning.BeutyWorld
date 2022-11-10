@@ -34,3 +34,39 @@
         line-height: 17.07px;
     }
 }
+
+.service-and-price {
+
+    &__nav { 
+        .active { 
+          color: red; 
+        } 
+      } 
+
+      &__tab { 
+        display: none; 
+         
+        &.active { 
+          display: block; 
+        } 
+      } 
+
+      &__menu-button {
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 14;
+        font-weight: 500;
+
+        &:hover {
+            color: #00BF78;
+            transition: 0.2s;
+        }
+
+        &.active {
+            color: #00BF78;
+            text-decoration: underline;
+        }
+    }
+}
