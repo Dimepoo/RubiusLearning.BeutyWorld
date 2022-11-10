@@ -55,6 +55,11 @@ function copy() {
     return src(['src/assets/**/*.*'], { base: 'src' }).pipe(dest('dist/'));
 }
 
+//Таск копирования js
+function copyJs () {
+    return src('src/js/**/*.js').pipe(dest('dist/js'));
+};
+
 // Таск очистки dist
 function cleanDist() {
     return src('dist', { allowEmpty: true }).pipe(clean());
@@ -74,5 +79,5 @@ function createDevServer() {
     })
 }
 
-exports.build = series(cleanDist, parallel(cleanDist, buildSass, buildHtml, copy));
-exports.default = series(buildSassDev, parallel(createDevServer, serve, copy));
+exports.build = series(cleanDist, parallel(cleanDist, buildSass, buildHtml, copy, copyJs));
+exports.default = series(buildSassDev, parallel(createDevServer, serve));

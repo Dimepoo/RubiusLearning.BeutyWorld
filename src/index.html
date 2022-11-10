@@ -24,31 +24,31 @@
                 </div>
 
                 <div class="header__top">
-
-                    <div class="menu-and-logo">
-
-                        <button id="mobile-menu-button" class="hamburger">
-                            <nav role="navigation">
-                                <div id="menuToggle">
-                                     <input type="checkbox" />
-                                    
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <ul id="menu">
-                                            <a href="#"><li>Home</li></a>
-                                            <a href="#"><li>About</li></a>
-                                            <a href="#"><li>Info</li></a>
-                                            <a href="#"><li>Contact</li></a>
-                                            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-                                        </ul>
-                                        </div>
-                            </nav>
-                        </button>
-
-                        <a href="" class="logo">Мир красоты</a>
                         
+                    <div class="hamburger-navigation">
+                                    
+                        <div class="hamburger-navigation__toggle">
+                            <input id="humburgerToggle" type="checkbox" />
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div id="humburgerMenu" class="hamburger-navigation__menu">
+
+                            <ul>
+                                <a href="#"><li>О нас</li></a>
+                                <a href="#"><li>Мастера</li></a>
+                                <a href="#"><li>Услуги и цены</li></a>
+                                <a href="#"><li>Наши работы</li></a>
+                                <a href="#"><li>Контакты</li></a>
+                            </ul>
+
+                        </div>
                     </div>
+
+                    <a href="" class="logo">Мир красоты</a>
 
                     <nav class="navigation header__nav">
                         <ul class="navigation__list">
@@ -872,6 +872,8 @@
             </div>
         </footer>
     </div>
+
+    <script src="./js/hamburger.js" type="module"></script>
 </body>
 
 </html>

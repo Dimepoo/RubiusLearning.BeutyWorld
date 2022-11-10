@@ -18,27 +18,30 @@
 /* Small Devices, Tablets */ 
 @media only screen and (max-width: 768px) {
 
-    .hamburger {
+    .hamburger-navigation {
 
-       visibility: visible;
-       display: block;
+        display: block;
     }
 
     .header {
         
         &__top {
+
             flex-direction: row;
         }
 
         &__main-image {
+
             opacity: 0;
         }
 
         &__content {
+
             flex-direction: column;
         }
 
         &__hero {
+
             align-items: center;
         }
     }
@@ -86,17 +89,23 @@
 
         align-self: center;
     }
+
+    .logo {
+
+       position: absolute;
+       margin-left: 50px;
+       z-index: 0;
+    }
 } 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width: 480px) { 
     
-    .hamburger {
-        
-       align-self: center; 
-       left: 0; 
-       position: absolute;
-       visibility: visible;
-       display: block;
+    .hamburger-navigation {
+
+        &__toggle {
+
+            position: absolute;
+        }
     }
 
     .quick-record-form {
@@ -113,6 +122,8 @@
 
     .logo {
 
+        position: static;
+        margin-left: 0;
         margin-bottom: 20px;
     }
 
@@ -125,8 +136,8 @@
         
         &__top {
 
-            justify-content: space-between;
             flex-direction: column;
+            align-items: center;
         }
     }
 } 
