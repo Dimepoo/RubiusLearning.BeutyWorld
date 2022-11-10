@@ -57,9 +57,8 @@ class TabsManager {
     }
 }
 
-window.onload = function() {
-    console.log('service-and-price');
+$(window).on('load', function() {
 
     const tabsElem = document.querySelector('.service-and-price');
     new TabsManager(tabsElem);
-};
+});

@@ -39,6 +39,6 @@ window.onload = () => {
 
   const disableScroll = () => body.classList.add('noscroll');
 
-  const enableScroll = () =>  body.classList.remove('noscroll');
+  const enableScroll = () => body.classList.remove('noscroll');
 
  

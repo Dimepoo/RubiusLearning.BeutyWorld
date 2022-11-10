@@ -1115,7 +1115,7 @@
     
                         </div>
     
-                        <div class="quick-record-form contacts-content__quick-record-form">
+                        <form class="quick-record-form contacts-content__quick-record-form" name="quickRecordForm">
     
                             <h4 class="quick-record-form__title">Быстрая запись</h4>
                             <p class="quick-record-form__description">Наш менеджер перезвонит в течении нескольких минут,
@@ -1124,9 +1124,9 @@
 
                             <div class="input-area quick-record-form__input-area">
 
-                                <input type="text" placeholder="Ваше имя" class="input-area__name-input">
-                                <input type="tel" placeholder="+7 (___) ___-__-__" class="input-area__phone-input">
-                                <button class="base-button base-button--large">
+                                <input name="name" type="text" placeholder="Ваше имя" class="input-area__name-input">
+                                <input name="phone" type="tel" placeholder="+7 (___) ___-__-__" class="input-area__phone-input">
+                                <button type="submit" class="base-button base-button--large">
                                     Записаться
                                 </button>
 
@@ -1134,7 +1134,7 @@
                             
                             <p class="quick-record-form__accepting">Нажимая на кнопку 
                                 вы соглашаетесь с <a href="">обработкой персональных данных</a></p>
-                        </div>
+                        </form>
                     </div>
                    
                 </div>
@@ -1183,6 +1183,8 @@
 
     <script src="./js/hamburger.js" type="module"></script>
     <script src="./js/service.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./js/quick-record-form.js"></script>
 
 </body>
 

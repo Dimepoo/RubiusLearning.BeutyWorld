@@ -37,6 +37,14 @@
 
 .service-and-price {
 
+      &__tab { 
+        display: none; 
+
+        &.active { 
+          display: block; 
+        } 
+      } 
+
       &__menu-button {
         border: 0;
         padding: 0;
