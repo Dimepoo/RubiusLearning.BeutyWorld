@@ -23,7 +23,7 @@
 
     &__top {
         padding: 30px 0;
-        align-items: baseline;
+        align-items: center;
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -66,6 +66,7 @@
 .phone-worktime-info {
     display: flex;
     flex-direction: column;
+    white-space: nowrap;
 
     &__phonenumber {
         font-size: 18px;
@@ -95,4 +96,10 @@
         margin-bottom: 59px;
     }
 
+}
+
+.menu-and-logo{
+
+    display: flex;
+    flex-direction: row;
 }

@@ -58,7 +58,6 @@
     padding: 40px;
     border-radius: 8px;
     margin-top: -100px;
-    margin-right: 80px;
 
     &__title {
 
@@ -80,7 +79,6 @@
     &__input-area {
 
         margin-top: 35px;
-        width: 375px;
         display: flex;
         flex-direction: column;
     }
@@ -95,8 +93,7 @@
 }
 
 .input-area {
-
-    
+  
     &__name-input, &__phone-input {
 
         border-radius: 4px;

@@ -11,6 +11,7 @@
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./../assets/images/video_about_us.png");
         border-radius: 8px;
         position: relative;
+        object-fit: cover;
     }
 }
 
