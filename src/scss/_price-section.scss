@@ -37,20 +37,6 @@
 
 .service-and-price {
 
-    &__nav { 
-        .active { 
-          color: red; 
-        } 
-      } 
-
-      &__tab { 
-        display: none; 
-         
-        &.active { 
-          display: block; 
-        } 
-      } 
-
       &__menu-button {
         border: 0;
         padding: 0;
@@ -59,15 +45,15 @@
         font-size: 14;
         font-weight: 500;
 
-        &:hover {
-            color: #00BF78;
-            transition: 0.2s;
-        }
+            &:hover {
+                color: #00BF78;
+                transition: 0.2s;
+            }
 
-        &.active {
-            color: #00BF78;
-            text-decoration: underline;
-        }
+            &.active {
+                color: #00BF78;
+                text-decoration: underline;
+            }
     }
 
     &__list {
@@ -81,14 +67,9 @@
 
     &__list-item {
         list-style: none;
-        margin-right: 28px;
+        padding: 20px;
         display: flex;
-        max-width: 444px;
         justify-content: space-between;
-
-        &:is(:last-child) {
-            margin-left: 0;
-        }
     }
 
 }
