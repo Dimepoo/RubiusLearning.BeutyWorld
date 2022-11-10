@@ -52,7 +52,7 @@ function buildHtml() {
 
 // Таск копирования статичных файлов
 function copy() {
-    return src(['src/assets/**/*.*'], { base: 'src' }).pipe(dest('dist/assets'));
+    return src(['src/assets/**/*.*'], { base: 'src' }).pipe(dest('dist/'));
 }
 
 // Таск очистки dist
