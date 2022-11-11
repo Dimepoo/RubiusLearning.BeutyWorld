@@ -108,8 +108,10 @@
     }
 }
 
+
 .works-gallery {
-    padding: 24px 0 70px;
+
+    padding: 24px;
 
     &__picture-list {
         list-style: none;
@@ -123,15 +125,9 @@
     &__picture {
         margin: 0 10px;
         max-width: 338px;
-        height: 338px;
         cursor: pointer;
         position: relative;
         transition: 0.3s scale;
-
-        &:hover {
-
-            scale: 1.1;
-        }
 
         & img {
             object-fit: cover;
