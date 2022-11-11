@@ -92,5 +92,5 @@ function createDevServer() {
     })
 }
 
-exports.build = series(cleanDist, parallel(cleanDist, buildSass, buildHtml, copy, buildJs));
+exports.build = series(cleanDist, parallel(cleanDist, buildSass, buildJs, buildHtml, copy));
 exports.default = series([buildSassDev, buildJs], parallel(createDevServer, serve));
