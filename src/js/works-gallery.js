@@ -1,6 +1,8 @@
+import 'slick-carousel/slick/slick'
+import $ from 'jquery';
+import '@fancyapps/ui'
 
-
-$(window).on('load', function() {
+export const initWorksGallery = () =>{
     console.log('gallery');
 
     $('.works-gallery__picture-list').slick({
@@ -10,6 +12,7 @@ $(window).on('load', function() {
         slidesToShow: 4,
         slidesToScroll: 4,
         centerMode: true,
+        variableWidth: true,
         prevArrow: $('.carousel-button--left'),
         nextArrow: $('.carousel-button--right'),
         responsive: [
@@ -36,4 +39,4 @@ $(window).on('load', function() {
             }
         ]
     });
-});
+};

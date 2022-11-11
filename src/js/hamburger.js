@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
 
-window.onload = () => { 
+export const initHamburger = () => { 
 
     const hamburgerBtn = document.querySelector('.hamburger-navigation__toggle').querySelector("input");
     const mobileMenu = document.querySelector('.hamburger-navigation__menu');

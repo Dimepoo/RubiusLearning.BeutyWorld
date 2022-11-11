@@ -1,5 +1,5 @@
 
-$(window).on('load', function() {
+export const initQuickRecordForm = () => {
     console.log('quick-record-form');
 
     const formEl = document.forms.quickRecordForm;
@@ -23,4 +23,4 @@ $(window).on('load', function() {
 
         console.log(user);
     });
-});
+};
