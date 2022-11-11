@@ -1,6 +1,6 @@
 
-export const initQuickRecordForm = () => {
-    console.log('quick-record-form');
+export const initAppointmentForm = () => {
+    console.log('.appointment-form');
 
     const formEl = document.forms.quickRecordForm;
 

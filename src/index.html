@@ -21,6 +21,48 @@
 <body>
     <div class="wrapper">
 
+        <form class="appointment-form appointment-form--dialog" name="dialogAppointment" id="dialog-content">
+            <h2 class="appointment-form__title">Онлайн-запись</h2>
+            <p class="appointment-form__description">
+                Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и
+                согласует время.
+            </p>
+            <input name="name" class="appointment-form__input appointment-form__input--default-border"
+                type="text" placeholder="Ваше имя">
+            <input name="phone" class="appointment-form__input appointment-form__input--default-border"
+                type="tel" placeholder="+7 (___) ___-__-__">
+            <select name="masterSelect"
+                class="appointment-form__select appointment-form__select--default-border">
+                <option hidden selected value="">
+                    Выберите мастера
+                </option>
+                <option value="0">Краснова Ирина Сергеевна</option>
+                <option value="1">Калилова Жанна Сергеевна</option>
+                <option value="2">Киселева Алина Сергеевна</option>
+                <option value="3">Иванова Елена Сергеевна</option>
+            </select>
+            <select name="serviceSelect"
+                class="appointment-form__select appointment-form__select--default-border">
+                <option hidden selected value="">
+                    Выберите услугу
+                </option>
+                <option value="0">Женская стрижка</option>
+                <option value="1">Мужская стрижка</option>
+                <option value="2">Детский стиль</option>
+                <option value="3">Креативный стиль</option>
+                <option value="4" >Экспресс укладка</option>
+            </select>
+            <input name="visitDate" type="date" placeholder="Удобная дата визита"
+                class="appointment-form__input appointment-form__input--default-border">
+            <button type="submit" class="base-button base-button--large" name="submitButton">
+                <div class="loader"></div>
+                <span>Записаться</span>
+            </button>
+            <p class="appointment-form__agreement">
+                Нажимая на кнопку вы соглашаетесь с <a href="#">обработкой персональных данных</a>
+            </p>
+        </form>
+
         <header class="header">
             <div class="main-container">
 
@@ -103,7 +145,7 @@
                         <h1 class="hero__title">Создай свой образ вместе с нами</h1>
                         <p class="hero__subtitle">Идеальный образ за 60 минут</p>
 
-                        <button class="base-button base-button--large">
+                        <button data-fancybox="header-dialog" data-src="#dialog-content" class="base-button base-button--large">
                             Записаться онлайн
                         </button>
 
@@ -1136,27 +1178,27 @@
 
                             </div>
 
-                            <form class="quick-record-form contacts-content__quick-record-form" name="quickRecordForm">
+                            <form class="appointment-form" name="appointmentForm">
 
-                                <h4 class="quick-record-form__title">Быстрая запись</h4>
-                                <p class="quick-record-form__description">Наш менеджер перезвонит в течении нескольких
+                                <h4 class="appointment-form__title">Быстрая запись</h4>
+                                <p class="appointment-form__description">Наш менеджер перезвонит в течении нескольких
                                     минут,
                                     уточнит подробности и согласует время
                                 </p>
 
-                                <div class="input-area quick-record-form__input-area">
+                                <div class="appointment-form__input-area">
 
                                     <input name="name" type="text" placeholder="Ваше имя"
-                                        class="input-area__name-input">
+                                        class="appointment-form__input appointment-form__input--default-border">
                                     <input name="phone" type="tel" placeholder="+7 (___) ___-__-__"
-                                        class="input-area__phone-input">
+                                        class="appointment-form__input appointment-form__input--default-border">
                                     <button type="submit" class="base-button base-button--large">
                                         Записаться
                                     </button>
 
                                 </div>
 
-                                <p class="quick-record-form__accepting">Нажимая на кнопку
+                                <p class="appointment-form__agreement">Нажимая на кнопку
                                     вы соглашаетесь с <a href="">обработкой персональных данных</a></p>
                             </form>
                         </div>
