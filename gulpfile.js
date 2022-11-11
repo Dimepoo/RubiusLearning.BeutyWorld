@@ -57,7 +57,7 @@ function copy() {
 
 //Таск копирования js
 function copyJs () {
-    return src('src/js/**/*.js').pipe(dest('dist/js'));
+    return src('src/js/*.js').pipe(dest('dist/js'));
 };
 
 // Таск очистки dist
