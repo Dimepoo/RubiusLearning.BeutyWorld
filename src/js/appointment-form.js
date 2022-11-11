@@ -2,7 +2,7 @@
 export const initAppointmentForm = () => {
     console.log('.appointment-form');
 
-    const formEl = document.forms.quickRecordForm;
+    const formEl = document.forms.appointmentForm;
 
     formEl.addEventListener('submit', (event) => {
         event.preventDefault();

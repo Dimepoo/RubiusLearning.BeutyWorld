@@ -32,7 +32,7 @@
             <input name="phone" class="appointment-form__input appointment-form__input--default-border"
                 type="tel" placeholder="+7 (___) ___-__-__">
             <select name="masterSelect"
-                class="appointment-form__select appointment-form__select--default-border">
+                class="appointment-form__select appointment-form__select--default-border" required>
                 <option hidden selected value="">
                     Выберите мастера
                 </option>
@@ -42,7 +42,7 @@
                 <option value="3">Иванова Елена Сергеевна</option>
             </select>
             <select name="serviceSelect"
-                class="appointment-form__select appointment-form__select--default-border">
+                class="appointment-form__select appointment-form__select--default-border" required>
                 <option hidden selected value="">
                     Выберите услугу
                 </option>
@@ -52,7 +52,8 @@
                 <option value="3">Креативный стиль</option>
                 <option value="4" >Экспресс укладка</option>
             </select>
-            <input name="visitDate" type="date" placeholder="Удобная дата визита"
+            <input name="visitDate" type="text" placeholder="Удобная дата визита" 
+                onfocus="(this.type='date')"onblur="(this.type='text')"
                 class="appointment-form__input appointment-form__input--default-border">
             <button type="submit" class="base-button base-button--large" name="submitButton">
                 <div class="loader"></div>
@@ -275,7 +276,8 @@
                                             <h4 class="service-info__title">Маникюр</h4>
                                             <p class="service-info__description">Аппаратный, комбинированный или
                                                 классический</p>
-                                            <button class="base-button base-button--small">Записаться</button>
+                                            <button data-fancybox="service-dialog-01" data-src="#dialog-content" 
+                                                class="base-button base-button--small">Записаться</button>
                                         </div>
 
                                     </div>
@@ -297,7 +299,8 @@
                                                 слой
                                                 полимеризуется в LED-лампе
                                             </p>
-                                            <button class="base-button base-button--small">Записаться</button>
+                                            <button data-fancybox="service-dialog-02"data-src="#dialog-content" 
+                                                class="base-button base-button--small">Записаться</button>
                                         </div>
 
                                     </div>
@@ -316,7 +319,8 @@
                                             <h4 class="service-info__title">Бразильский маникюр</h4>
                                             <p class="service-info__description">Выполняется в одноразовых перчатках
                                                 наполненных увлажняющим лосьоном</p>
-                                            <button class="base-button base-button--small">Записаться</button>
+                                            <button data-fancybox="service-dialog-03"data-src="#dialog-content" 
+                                                class="base-button base-button--small">Записаться</button>
                                         </div>
 
                                     </div>
@@ -335,7 +339,8 @@
                                             <h4 class="service-info__title">Педикюр</h4>
                                             <p class="service-info__description">Аппаратный, комбинированный или
                                                 классический</p>
-                                            <button class="base-button base-button--small">Записаться</button>
+                                            <button data-fancybox="service-dialog-04"data-src="#dialog-content" 
+                                                class="base-button base-button--small">Записаться</button>
                                         </div>
 
                                     </div>
@@ -356,7 +361,8 @@
                                                 Благодаря этой процедуре увлажнение кожи увеличивается на 80%,
                                                 также выводит токсины и укрепляет суставы.
                                             </p>
-                                            <button class="base-button base-button--small">Записаться</button>
+                                            <button data-fancybox="service-dialog-05"data-src="#dialog-content"  
+                                                class="base-button base-button--small">Записаться</button>
                                         </div>
 
                                     </div>
@@ -943,7 +949,7 @@
                                 <div class="master-card">
                                     <div class="master-data master-card__master-data">
 
-                                        <div class="master-data__picture">
+                                        <div class="master-data__picture" data-fancybox="master-dialog-01" data-src="#dialog-content">
                                             <img src="./assets/images/master-1.png" alt="Фото мастера">
                                         </div>
 
@@ -963,7 +969,7 @@
                                 <div class="master-card">
                                     <div class="master-data master-card__master-data">
 
-                                        <div class="master-data__picture">
+                                        <div class="master-data__picture" data-fancybox="master-dialog-02" data-src="#dialog-content">
                                             <img src="./assets/images/master-2.png" alt="Фото мастера">
                                         </div>
 
@@ -983,7 +989,7 @@
                                 <div class="master-card">
                                     <div class="master-data master-card__master-data">
 
-                                        <div class="master-data__picture">
+                                        <div class="master-data__picture" data-fancybox="master-dialog-03" data-src="#dialog-content">
                                             <img src="./assets/images/master-3.png" alt="Фото мастера">
                                         </div>
 
@@ -1003,7 +1009,7 @@
                                 <div class="master-card">
                                     <div class="master-data master-card__master-data">
 
-                                        <div class="master-data__picture">
+                                        <div class="master-data__picture" data-fancybox="master-dialog-04"data-src="#dialog-content">
                                             <img src="./assets/images/master-4.png" alt="Фото мастера">
                                         </div>
 
