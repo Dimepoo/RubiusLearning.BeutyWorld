@@ -32,29 +32,28 @@
             <input name="phone" class="appointment-form__input appointment-form__input--default-border"
                 type="tel" placeholder="+7 (___) ___-__-__">
             <select name="masterSelect"
-                class="appointment-form__select appointment-form__select--default-border" required>
+                class="appointment-form__select appointment-form__select--default-border">
                 <option hidden selected value="">
                     Выберите мастера
                 </option>
-                <option value="0">Краснова Ирина Сергеевна</option>
-                <option value="1">Калилова Жанна Сергеевна</option>
-                <option value="2">Киселева Алина Сергеевна</option>
-                <option value="3">Иванова Елена Сергеевна</option>
+                <option value="1">Краснова Ирина Сергеевна</option>
+                <option value="2">Калилова Жанна Сергеевна</option>
+                <option value="3">Киселева Алина Сергеевна</option>
+                <option value="4">Иванова Елена Сергеевна</option>
             </select>
             <select name="serviceSelect"
-                class="appointment-form__select appointment-form__select--default-border" required>
+                class="appointment-form__select appointment-form__select--default-border">
                 <option hidden selected value="">
                     Выберите услугу
                 </option>
-                <option value="0">Женская стрижка</option>
-                <option value="1">Мужская стрижка</option>
-                <option value="2">Детский стиль</option>
-                <option value="3">Креативный стиль</option>
-                <option value="4" >Экспресс укладка</option>
+                <option value="1">Женская стрижка</option>
+                <option value="2">Мужская стрижка</option>
+                <option value="3">Детский стиль</option>
+                <option value="4">Креативный стиль</option>
+                <option value="5" >Экспресс укладка</option>
             </select>
-            <input name="visitDate" type="text" placeholder="Удобная дата визита" 
-                onfocus="(this.type='date')"onblur="(this.type='text')"
-                class="appointment-form__input appointment-form__input--default-border">
+            <input name="visitDate" type="date"
+                class="text-input appointment-form__input appointment-form__input--default-border">
             <button type="submit" class="base-button base-button--large" name="submitButton">
                 <div class="loader"></div>
                 <span>Записаться</span>
@@ -1199,7 +1198,8 @@
                                     <input name="phone" type="tel" placeholder="+7 (___) ___-__-__"
                                         class="appointment-form__input appointment-form__input--default-border">
                                     <button type="submit" class="base-button base-button--large">
-                                        Записаться
+                                        <div class="loader"></div>
+                                        <span>Записаться</span>
                                     </button>
 
                                 </div>
