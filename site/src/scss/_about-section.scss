@@ -17,6 +17,9 @@
 }
 
 .about-text-content {
+    
+    display: flex;
+    flex-direction: column;
 
     &__subheader {
         font-family: inherit;
