@@ -69,9 +69,11 @@
 }
 
 .about-advantage-content {
+
     display: flex;
     justify-content: space-around;
     padding-top: 100px;
+    flex-direction: row;
 
     &__advantage-item {
         display: flex;

@@ -64,7 +64,7 @@
         }
     }
 
-    .header__nav, .footer__nav{
+    .header__nav{
 
         display: none;
     }
@@ -126,6 +126,7 @@
         align-self: center;
         width: 300px;
         height: 205px;
+        margin-top: 40px;
     }
 
     .logo {
@@ -146,6 +147,17 @@
 
             flex-direction: column;
             align-items: center;
+        }
+    }
+
+    .about-advantage-content {
+
+        flex-direction: column;
+        align-items: center;
+
+        &__advantage-item:not(:last-child){
+          
+            margin-bottom: 40px;
         }
     }
 } 
