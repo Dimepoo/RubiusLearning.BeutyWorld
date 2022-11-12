@@ -1,4 +1,5 @@
 import { Fancybox } from "@fancyapps/ui/src/Fancybox/Fancybox";
+import "inputmask";
 
 const GRAY_PLACEHOLDER_CLASS = 'select-input--gray-placeholder';
 const DEFAULT_BORDER_CLASS = 'appointment-form__input--default-border';
@@ -10,6 +11,8 @@ export const initAppointmentForm = () => {
     for(let i = 0; i < document.forms.length; i++) {
 
         const formElement = document.forms[i];
+
+        Inputmask({"mask": "+7 (999) 999-9999"}).mask('input[name=phone]');
 
         const validationMessage = new Validation({
             appendParent: formElement,

@@ -42,6 +42,7 @@
   "dependencies": {
     "@fancyapps/ui": "^4.0.31",
     "bootstrap": "^5.2.2",
+    "inputmask": "^5.0.7",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
   }
