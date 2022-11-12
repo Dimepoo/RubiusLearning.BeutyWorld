@@ -65,16 +65,24 @@
 
 .base-button {
     cursor: pointer;
+    display: flex;
     background-color: #FB9475;
     border-width: 0;
     color: #FFF;
     font-family: inherit;
-
+    align-items: center;
+    justify-content: center;
+    
     &--large {
         padding: 17px 30px;
         font-size: 14px;
         font-weight: 500;
         border-radius: 24px;
+    }
+
+    &--disable {
+
+        background-color: #FB947599;
     }
 
     &--small {

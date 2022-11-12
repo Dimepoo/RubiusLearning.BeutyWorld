@@ -1,4 +1,5 @@
 .validation {
+
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -8,12 +9,15 @@
     left: 50%;
     transform: translateX(-50%);
     max-width: 80%;
+    text-align: center;
   
     &__message {
+
       margin-right: 24px;
     }
   
     &__hide {
+
       padding: 0;
       background: none;
       border: none;
@@ -22,10 +26,12 @@
     }
   
     &--success {
+
       background: lightgreen;
     }
   
     &--error {
+
       background: lightcoral;
     }
   }

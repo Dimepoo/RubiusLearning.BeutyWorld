@@ -55,7 +55,7 @@ const AddEventListenerInput = (formElement) => {
 
 const AddEventListenerSubmit = (formElement, validationMessage) => {
 
-    const { name, phone, masterSelect, serviceSelect, visitDate, loader, submitButton  } = getFormElements(formElement);
+    const { name, phone, masterSelect, serviceSelect, visitDate } = getFormElements(formElement);
 
     const inputs = createInputArray(formElement);
 
@@ -63,7 +63,7 @@ const AddEventListenerSubmit = (formElement, validationMessage) => {
         event.preventDefault();
 
         inputs.forEach((input) => {
-            if (!input.value) {
+            if (!input.value && input.name != 'visitDate') {
                 input.classList.remove(DEFAULT_BORDER_CLASS);
 
                 if (!input.classList.contains(ERROR_BORDER_CLASS)) {
@@ -83,36 +83,18 @@ const AddEventListenerSubmit = (formElement, validationMessage) => {
         const order = {
             name: name.value,
             phone: phone.value,
-            visitDate: visitDate ? visitDate.value : '2023-02-01',
             masterId: masterSelect ? masterSelect.options[masterSelect.selectedIndex].value : 1,
-            serviceId: serviceSelect ? serviceSelect.options[serviceSelect.selectedIndex].value : 2
+            serviceId: serviceSelect ? serviceSelect.options[serviceSelect.selectedIndex].value : 2,
+            visitDate: visitDate ? visitDate.value : '2023-02-01'
         };
 
-        //Тут надо метод отправки данных на свервер
-
-        loader.classList.add('loader--visible');
-        submitButton.disabled = true;
-
-        setTimeout(() => {
-
-            console.log('imitation server connecting');
-
-            loader.classList.remove('loader--visible');
-            submitButton.disabled = false;
-
-            const fancybox = Fancybox.getInstance();
-            fancybox.close();
-            clearForm(formElement);
-
-            validationMessage.show('Заявка успешно отправлена!', false, true);
-
-        }, 2000);
+        fetchOrder(order, validationMessage, formElement);
 
     });
 }
 
-const createInputArray = (formEl) => {
-    const { name, phone } = getFormElements(formEl);
+const createInputArray = (formElement) => {
+    const { name, phone, visitDate } = getFormElements(formElement);
 
     let inputs = [];
 
@@ -124,11 +106,15 @@ const createInputArray = (formEl) => {
         inputs = [...inputs, phone];
     }
 
+    if (visitDate) {
+        inputs = [...inputs, visitDate];
+    }
+
     return inputs;
 };
 
-const createSelectorArray = (formEl) => {
-    const { masterSelect, serviceSelect } = getFormElements(formEl);
+const createSelectorArray = (formElement) => {
+    const { masterSelect, serviceSelect } = getFormElements(formElement);
 
     let selectors = [];
 
@@ -160,27 +146,27 @@ const clearForm = (formElement) => {
     }
 };
 
-const getFormElements = (formEl) => {
-    const submitButton = getSubmitButton(formEl);
+const getFormElements = (formElement) => {
+    const submitButton = getSubmitButton(formElement);
     const loader = submitButton ? submitButton.querySelector('.loader') : null;
 
     return {
-        name: formEl.elements.name,
-        phone: formEl.elements.phone,
-        masterSelect: formEl.elements.masterSelect,
-        serviceSelect: formEl.elements.serviceSelect,
-        visitDate: formEl.elements.visitDate,
+        name: formElement.elements.name,
+        phone: formElement.elements.phone,
+        masterSelect: formElement.elements.masterSelect,
+        serviceSelect: formElement.elements.serviceSelect,
+        visitDate: formElement.elements.visitDate,
         loader,
         submitButton
     };
 };
 
-const getSubmitButton = (formEl) => {
-    for (let i = 0; i < formEl.elements.length; i++) {
-        const formElement = formEl.elements[i];
+const getSubmitButton = (formElement) => {
+    for (let i = 0; i < formElement.elements.length; i++) {
+        const formEl = formElement.elements[i];
 
-        if (formElement.type === 'submit') {
-            return formElement;
+        if (formEl.type === 'submit') {
+            return formEl;
         }
     }
 
@@ -195,7 +181,7 @@ class Validation {
     }
 
     show(message, disableAutoHide = false, isSuccess = false) {
-        this.elem = this._createAlert(message);
+        this.elem = this.#createAlert(message);
 
         if (isSuccess) {
             this.elem.classList.add(`${this.cssPrefix}--success`);
@@ -210,7 +196,7 @@ class Validation {
         }
     }
 
-    _createAlert(message) {
+    #createAlert(message) {
         const elem = document.createElement('div');
         elem.classList.add(this.cssPrefix);
         elem.innerHTML = `<span class="${this.cssPrefix}__message">${message}</span>`;
@@ -218,3 +204,44 @@ class Validation {
         return elem;
     }
 }
+
+const fetchOrder = (order, validationMessage, formElement) => {
+    const { loader, submitButton } = getFormElements(formElement);
+
+    loader.classList.add('loader--visible');
+    submitButton.classList.add('base-button--disable');
+    submitButton.querySelector('span').style.display = 'none';
+    submitButton.disabled = true;
+
+    fetch('https://beauty-saloon-server.herokuapp.com/api/orders', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(order),
+    })
+        .then((response) => {
+            if (response.status === 201) {
+                validationMessage.show('Ваша заявка отправлена! Ожидайте звонка менеджера', false, true);
+                submitButton.querySelector('span').style.display = 'block';
+
+                setTimeout(() => {
+                    clearForm(formElement);
+                    const fancybox = Fancybox.getInstance();
+                    fancybox.close();
+                    submitButton.disabled = false;
+                    submitButton.classList.remove('base-button--disable');
+                }, 3000);
+            } else if (response.status === 400 || response.status === 404) {
+                response.text().then((responseText) => {
+                    validationMessage.show(responseText.message);
+                });
+            }
+        })
+        .catch((error) => {
+            validationMessage.show(error.message);
+        })
+        .finally(() => {
+            loader.classList.remove('loader--visible');
+        });
+};
