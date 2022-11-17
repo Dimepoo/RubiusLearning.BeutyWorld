@@ -108,10 +108,7 @@
     }
 }
 
-
 .works-gallery {
-
-    padding: 24px;
 
     &__picture-list {
         list-style: none;
@@ -123,11 +120,17 @@
     }
 
     &__picture {
-        margin: 0 10px;
+        margin: 15px;
         max-width: 338px;
+        height: 338px;
         cursor: pointer;
         position: relative;
         transition: 0.3s scale;
+
+        &:hover {
+
+            scale: 1.1;
+        }
 
         & img {
             object-fit: cover;
@@ -136,12 +139,6 @@
             object-position: center;
             display: block;
             border-radius: 8px;
-            transition: 0.3s scale;
-        }
-
-        & img:hover {
-
-            scale: 1.1;
         }
 
         &::after {

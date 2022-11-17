@@ -1,0 +1,37 @@
+.validation {
+
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 80%;
+    text-align: center;
+  
+    &__message {
+
+      margin-right: 24px;
+    }
+  
+    &__hide {
+
+      padding: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: 0;
+    }
+  
+    &--success {
+
+      background: lightgreen;
+    }
+  
+    &--error {
+
+      background: lightcoral;
+    }
+  }

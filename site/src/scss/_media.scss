@@ -32,7 +32,7 @@
 
         &__main-image {
 
-            opacity: 0;
+            display: none;
         }
 
         &__content {
@@ -64,7 +64,7 @@
         }
     }
 
-    .header__nav, .footer__nav{
+    .header__nav{
 
         display: none;
     }
@@ -74,7 +74,7 @@
         flex-direction: column;
     }
 
-    .quick-record-form {
+    .appointment-form {
 
         margin: 20px 0;
         align-self: center;
@@ -88,6 +88,7 @@
     .about-image-content {
 
         align-self: center;
+        margin-top: 40px;
     }
 
     .logo {
@@ -104,6 +105,12 @@
             justify-content: center;
         }
     }
+
+    .about-text-content {
+
+        align-items: center;
+        text-align: center;
+    }
 } 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width: 480px) { 
@@ -116,16 +123,15 @@
         }
     }
 
-    .quick-record-form {
-
-        width: 350px;
-    }
-
     .about-image-content {
 
-        align-self: center;
         width: 300px;
         height: 205px;
+    }
+
+    .appointment-form {
+
+        width: 350px;
     }
 
     .logo {
@@ -146,6 +152,17 @@
 
             flex-direction: column;
             align-items: center;
+        }
+    }
+
+    .about-advantage-content {
+
+        flex-direction: column;
+        align-items: center;
+
+        &__advantage-item:not(:last-child){
+          
+            margin-bottom: 40px;
         }
     }
 } 

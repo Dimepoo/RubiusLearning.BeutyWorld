@@ -57,8 +57,8 @@ class TabsManager {
     }
 }
 
-$(window).on('load', function() {
+export const initServices = () => {
 
     const tabsElem = document.querySelector('.service-and-price');
     new TabsManager(tabsElem);
-});
+};
